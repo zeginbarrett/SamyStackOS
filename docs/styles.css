@@ -100,3 +100,22 @@
 @media(max-width:950px){.hardware-heading{align-items:start}.hardware-counter{padding-top:25px}.hardware-spotlight{padding:28px}.screenshot-grid{gap:10px}.screenshot-info{padding:13px}.screenshot-info strong{font-size:13px}.fleet-layout{grid-template-columns:1.2fr .8fr}.fleet-inspector{display:block}.fleet-scroll{max-height:350px}}
 @media(max-width:730px){.hardware-heading{display:block}.hardware-counter{padding-top:0}.hardware-counter strong{font-size:48px}.hardware-spotlight{grid-template-columns:1fr}.hardware-spotlight-art{max-width:100%}.screenshot-grid{grid-template-columns:1fr}.screenshot-item img{aspect-ratio:16/9;object-fit:contain}.screenshot-info strong{font-size:17px}.fleet-layout{grid-template-columns:1fr}.fleet-scroll{max-height:350px}.fleet-inspector{display:block}.fleet-metrics>div{padding:10px}.fleet-metrics strong{font-size:22px}.fleet-metrics span{font-size:8px}}
 @media(max-width:530px){.hardware-categories{grid-template-columns:1fr}.hardware-category{min-height:0}.hardware-spotlight{padding:23px}.hardware-spotlight h3{font-size:25px}.fleet-metrics{grid-template-columns:repeat(2,1fr)}.fleet-table-head,.fleet-row{grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr) minmax(0,.8fr)}.fleet-table-head>span:nth-child(3),.fleet-row>.fleet-link{display:none}.fleet-table-head{padding:10px 7px}.fleet-row{padding:10px 7px}.fleet-name b{font-size:10px}.fleet-role{font-size:8px}.fleet-state{font-size:8px}.fleet-filter button{font-size:9px;padding:8px}.hardware-counter{gap:10px}.hardware-counter strong{font-size:44px}}
+
+/* Inline Hardware Fleet: only appears after the visitor opens the demo. */
+[hidden]{display:none!important}
+.hardware-live-demo{margin-top:30px;scroll-margin-top:98px}
+.hardware-live-heading{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:15px}
+.hardware-live-heading .kicker{margin-bottom:10px}
+.hardware-live-heading h3{font:700 clamp(23px,2.6vw,32px)/1.15 var(--display);letter-spacing:-.055em;margin:0 0 7px}
+.hardware-live-heading p{font-size:13px;line-height:1.65;color:#a7b9c9;max-width:680px;margin:0}
+.hardware-demo-pill{display:inline-flex;align-items:center;gap:6px;border:1px solid #577449;border-radius:24px;background:#263a2c;color:#c8f6b4;padding:10px 13px;font:700 10px var(--mono);white-space:nowrap}
+.hardware-live-workspace{border:1px solid #4c5f72;border-radius:10px;background:#141e2b;padding:0 15px 15px;overflow:hidden}
+.hardware-live-top{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #384b5f;margin:0 -15px 15px;padding:13px 16px;background:#212e3e;color:#9cb0c0;font:700 10px var(--mono)}
+.hardware-live-top strong{color:#e5f3e5;display:inline-flex;align-items:center;gap:8px;font-weight:750}
+.small-hw-logo{background:var(--lime);color:#11201a;font-size:16px;padding:3px 6px;border-radius:5px}
+.hardware-live-disclaimer{font-size:11px;color:#8396a8;line-height:1.6;margin:10px 0 0}
+.hardware-fallback{color:#bccddd;font-size:12px}
+.hardware-static-preview{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;padding:8px 0 10px}
+.hardware-static-preview span{padding:11px;border:1px solid #425367;border-radius:5px}
+@media(max-width:730px){.hardware-live-heading{align-items:flex-start;flex-direction:column}.hardware-demo-pill{font-size:9px}.hardware-live-top{font-size:8px}}
+@media(max-width:530px){.hardware-live-workspace{padding:0 8px 10px}.hardware-live-top{margin:0 -8px 10px;padding:11px 9px}.hardware-live-top>span{display:none}.hardware-static-preview{grid-template-columns:1fr}}
