@@ -99,17 +99,6 @@
     clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>{box.hidden=true;},3200);
   }
   document.addEventListener("click",event=>{
-    const hardwareButton=event.target.closest("#open-hardware-demo");
-    if(hardwareButton){
-      const section=$("#hardware-demo");
-      if(section){
-        section.hidden=false;
-        hardwareButton.setAttribute("aria-expanded","true");
-        renderEmbedded();
-        section.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});
-      }
-      return;
-    }
     const open=event.target.closest("[data-open-view]");
     if(open){setView(open.dataset.openView,{scroll:true});return;}
     const tab=event.target.closest(".console-nav-item[data-view]");
