@@ -1,0 +1,35 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#111721"><meta name="color-scheme" content="dark"><title>Interactive console demo | SamyStackOS</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles.css?v=pages-20261114-1"><link rel="stylesheet" href="/site-v2.css?v=pages-20261114-1"><script src="/app.js?v=pages-20261114-1" defer></script></head><body class="demo-multipage"><div class="multi-demo-app"><div class="multi-demo-toolbar"><a href="/">← Back to website</a><span>SamyStackOS CONSOLE <small>DEMONSTRATION · SAMPLE DATA</small></span><button type="button" id="demo-fullscreen">⛶ Fullscreen</button></div><div class="console" aria-label="SamyStackOS interactive dashboard demonstration using fictional data">
+        <aside class="console-sidebar">
+          <div class="console-logo"><span class="tiny-stack">▥</span><span>samystack<span class="lime">/</span>os</span></div>
+          <div class="console-nav-label">WORKSPACE</div>
+          <nav class="console-nav" aria-label="Product preview screens">
+            <button type="button" class="console-nav-item is-active" data-view="overview" aria-pressed="true"><span class="nav-symbol">◫</span><span>Overview</span></button>
+            <button type="button" class="console-nav-item" data-view="nodes" aria-pressed="false"><span class="nav-symbol">▤</span><span>Cluster & nodes</span></button>
+            <button type="button" class="console-nav-item" data-view="vms" aria-pressed="false"><span class="nav-symbol">▣</span><span>Virtual machines</span></button>
+            <button type="button" class="console-nav-item" data-view="containers" aria-pressed="false"><span class="nav-symbol">⬡</span><span>Containers</span></button>
+            <button type="button" class="console-nav-item" data-view="storage" aria-pressed="false"><span class="nav-symbol">▥</span><span>Storage</span></button>
+            <button type="button" class="console-nav-item" data-view="network" aria-pressed="false"><span class="nav-symbol">⌁</span><span>Networking</span></button>
+            <button type="button" class="console-nav-item" data-view="backup" aria-pressed="false"><span class="nav-symbol">⟳</span><span>Backups</span></button>
+            <button type="button" class="console-nav-item" data-view="apps" aria-pressed="false"><span class="nav-symbol">▦</span><span>App catalog</span></button>
+<button type="button" class="console-nav-item" data-view="hardware" aria-pressed="false"><span class="nav-symbol">⌘</span><span>Hardware fleet</span></button>
+          </nav>
+          <div class="console-sidebar-bottom"><span class="console-sidebar-led"></span> DESIGN PREVIEW <small>v0.1 CONCEPT</small></div>
+        </aside>
+        <div class="console-main">
+          <div class="console-topbar"><div><span class="console-location">HOME <span>/</span> <b id="console-path">OVERVIEW</b></span></div><div class="console-clock"><span class="clock-led"></span><time id="console-clock">--:--</time><span class="console-user">DEMO</span></div></div>
+          <div class="console-view" id="console-view" aria-live="polite">
+            <div class="view-heading"><div><div class="view-subtitle">HOMELAB AT A GLANCE</div><h3>Good to see you again.</h3><p>Everything your cluster needs, all in one place.</p></div><span class="view-badge"><span></span> SAMPLE CLUSTER</span></div>
+            <div class="stat-grid">
+              <div class="stat"><span>ONLINE NODES</span><strong>04 <small>/ 04</small></strong><span class="stat-foot"><i></i> All connected</span></div>
+              <div class="stat"><span>RUNNING VMs</span><strong>12</strong><span class="stat-foot"><i></i> Across 3 hosts</span></div>
+              <div class="stat"><span>CONTAINERS</span><strong>26</strong><span class="stat-foot"><i></i> 24 healthy</span></div>
+              <div class="stat"><span>STORAGE USED</span><strong>62<small>%</small></strong><span class="stat-foot">7.4 TB of 12 TB</span></div>
+            </div>
+            <div class="view-columns">
+              <div class="ui-panel"><div class="ui-panel-head"><strong>CLUSTER NODES</strong><span>STATUS / LOAD</span></div><div class="ui-row"><span class="device-name"><i></i> mini-01 <small>MANAGER</small></span><span class="mini-bar"><b style="width:36%"></b></span><span class="healthy">ONLINE</span></div><div class="ui-row"><span class="device-name"><i></i> mini-02 <small>COMPUTE</small></span><span class="mini-bar"><b style="width:58%"></b></span><span class="healthy">ONLINE</span></div><div class="ui-row"><span class="device-name"><i></i> mini-03 <small>COMPUTE</small></span><span class="mini-bar"><b style="width:26%"></b></span><span class="healthy">ONLINE</span></div><div class="ui-row"><span class="device-name"><i></i> nas-01 <small>STORAGE</small></span><span class="mini-bar"><b style="width:43%"></b></span><span class="healthy">ONLINE</span></div></div>
+              <div class="ui-panel panel-meter"><div class="ui-panel-head"><strong>RESOURCE POOL</strong><span>CLUSTER-WIDE</span></div><div class="resource-line"><span>PROCESSOR</span><b>38%</b></div><div class="resource-track"><span style="width:38%"></span></div><div class="resource-line"><span>MEMORY</span><b>54%</b></div><div class="resource-track"><span style="width:54%;background:var(--violet)"></span></div><div class="resource-line"><span>STORAGE</span><b>62%</b></div><div class="resource-track"><span style="width:62%;background:var(--cyan)"></span></div><div class="resource-meta">METRICS ARE ILLUSTRATIVE ONLY</div></div>
+            </div>
+          </div>
+          <div class="console-foot"><span><span class="foot-dot"></span> DEMO ENVIRONMENT — NO REAL SERVERS CONNECTED</span><span>LOCAL-FIRST / SELF-HOSTED VISION</span></div>
+        </div>
+      </div><div id="demo-toast" class="demo-toast" role="status" aria-live="polite" hidden></div></div><script>document.getElementById("demo-fullscreen").addEventListener("click",async function(){try{if(document.fullscreenElement){await document.exitFullscreen()}else if(document.documentElement.requestFullscreen){await document.documentElement.requestFullscreen()}}catch(e){this.textContent="Fullscreen unavailable"}});</script></body></html>

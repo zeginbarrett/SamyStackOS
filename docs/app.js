@@ -110,6 +110,7 @@
     const action=event.target.closest("[data-demo-action]");
     if(action){toast(action.dataset.demoAction+' is part of the product concept. No real action was performed.');}
   });
-  setView("overview");
+  const requested = new URLSearchParams(location.search).get("view");
+  setView(requested && (dataViews[requested] || requested === "hardware" || requested === "overview") ? requested : "overview");
   renderEmbedded();
 })();
