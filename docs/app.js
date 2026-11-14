@@ -3,7 +3,7 @@
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
   const esc = (value) => String(value).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
-  const nameOf = { overview:"Overview",nodes:"Cluster & nodes",vms:"Virtual machines",containers:"Containers",storage:"Storage",network:"Networking",backup:"Backups",apps:"App catalog",hardware:"Hardware fleet" };
+  const nameOf = { overview:"Overview",nodes:"Cluster & nodes",vms:"Virtual machines",containers:"Containers",storage:"Storage",network:"Networking",backup:"Backups",apps:"App catalog",hardware:"Hardware fleet",android:"Android compute" };
 
   // Illustrative data: this site does not connect to or control any device.
   const devices = [
@@ -22,11 +22,20 @@
     {id:"esp32-cam",name:"Doorway camera",model:"ESP32-CAM",type:"camera",role:"CAMERA",link:"Wi-Fi",addr:"10.0.0.46",status:"online",firmware:"ESP32-CAM · video",battery:"USB",metrics:"Stream available · 24 fps",detail:"Low-cost network camera with motion alerts"},
     {id:"esp32-climate",name:"Climate sensor",model:"ESP32-C3 sensor node",type:"esp32",role:"SENSOR",link:"Wi-Fi / MQTT",addr:"10.0.0.47",status:"online",firmware:"ESPHome · sensor",battery:"Battery",metrics:"23°C · 46% humidity",detail:"Environmental monitoring and automation triggers"},
     {id:"esp32-relay",name:"Automation relay",model:"ESP32-S3 relay controller",type:"esp32",role:"AUTOMATION",link:"Wi-Fi / MQTT",addr:"10.0.0.48",status:"offline",firmware:"ESPHome · relay",battery:"Mains",metrics:"Last seen 3h ago",detail:"Local switches and programmable automation outputs"}
+  ,
+    {"id":"galaxy-s9","name":"Galaxy S9","model":"Samsung Galaxy S9 · Android","type":"android","role":"COMPUTE WORKER","link":"Wi-Fi / USB-C","addr":"10.0.0.61","status":"online","firmware":"Android · arm64-v8a","battery":"Charging · 98%","metrics":"CPU 35% · RAM 1.7 GB available","detail":"Opt-in ARM worker for chunked image and file jobs"},
+    {"id":"pixel-4a","name":"Pixel 4a","model":"Google Pixel 4a · Android","type":"android","role":"COMPUTE WORKER","link":"Wi-Fi / USB-C","addr":"10.0.0.62","status":"online","firmware":"Android · arm64-v8a","battery":"Charging · 87%","metrics":"CPU 23% · RAM 2.1 GB available","detail":"Worker for compatible batched data processing"},
+    {"id":"moto-g","name":"Moto G Power","model":"Motorola Moto G Power · Android","type":"android","role":"COMPUTE WORKER","link":"Wi-Fi / USB-C","addr":"10.0.0.63","status":"online","firmware":"Android · arm64-v8a","battery":"Charging · 92%","metrics":"CPU 51% · RAM 1.2 GB available","detail":"Portable worker assigned independent processing tasks"},
+    {"id":"galaxy-a32","name":"Galaxy A32","model":"Samsung Galaxy A32 · Android","type":"android","role":"COMPUTE WORKER","link":"Wi-Fi / USB-C","addr":"10.0.0.64","status":"online","firmware":"Android · arm64-v8a","battery":"Charging · 100%","metrics":"CPU 18% · RAM 2.7 GB available","detail":"ARM task worker with charging-only scheduling policy"},
+    {"id":"lg-v40","name":"LG V40","model":"LG V40 ThinQ · Android","type":"android","role":"COMPUTE WORKER","link":"Wi-Fi / USB-C","addr":"10.0.0.65","status":"online","firmware":"Android · arm64-v8a","battery":"Charging · 91%","metrics":"CPU 42% · RAM 2.1 GB available","detail":"Optional worker for image processing and checksums"},
+    {"id":"pixel-3a","name":"Pixel 3a","model":"Google Pixel 3a · Android","type":"android","role":"COMPUTE WORKER","link":"Wi-Fi / USB-C","addr":"10.0.0.66","status":"idle","firmware":"Android · arm64-v8a","battery":"Battery 36% · waiting for charger","metrics":"CPU 0% · thermal policy safe","detail":"Paused by power policy; not eligible for new jobs"}
   ];
-  const typeName = {all:"All devices",server:"Servers",pi:"Raspberry Pi",esp32:"ESP32",radio:"Radio",camera:"Cameras"};
+  const typeName = {all:"All devices",server:"Servers",pi:"Raspberry Pi",esp32:"ESP32",radio:"Radio",camera:"Cameras",android:"Android"};
   let selectedDevice = "waveshare-audio";
   let selectedFilter = "all";
   let currentView = "overview";
+  let simulatedJobCount=0;
+  let latestJob="";
 
   const menu = $(".nav-toggle"), nav = $("#nav");
   const closeMenu = () => {nav?.classList.remove("open");menu?.setAttribute("aria-expanded","false");menu?.setAttribute("aria-label","Open menu");};
@@ -64,9 +73,9 @@
     const count=filtered().length;
     const active=devices.find(d=>d.id===selectedDevice)||devices[0];
     return panelHeading("Hardware & edge fleet","Mini PCs, Raspberry Pi, ESP32, radios, cameras and more — under one roof.",
-      '<span class="view-badge"><span></span> 15 DEMO DEVICES</span>')+
+      '<span class="view-badge"><span></span> '+devices.length+' DEMO DEVICES</span>')+
       '<div class="fleet-metrics">'+[
-       ["15","DEVICES"],["13","ONLINE"],["01","IDLE"],["01","OFFLINE"]
+       [String(devices.length),"DEVICES"],[String(devices.filter(d=>d.status==="online").length),"ONLINE"],[String(devices.filter(d=>d.status==="idle").length),"IDLE"],[String(devices.filter(d=>d.status==="offline").length),"OFFLINE"]
       ].map(([n,l])=>'<div><strong>'+n+'</strong><span>'+l+'</span></div>').join("")+'</div>'+
       '<div class="fleet-filter" role="group" aria-label="Hardware type filter">'+Object.entries(typeName).map(([key,label])=>
        '<button type="button" data-fleet-filter="'+esc(key)+'" aria-pressed="'+String(selectedFilter===key)+'" class="'+(selectedFilter===key?'active':'')+'">'+esc(label)+'</button>').join("")+'</div>'+
@@ -78,17 +87,35 @@
         ].map(([label,val])=>'<div><span>'+esc(label)+'</span><b>'+esc(val)+'</b></div>').join("")+'</div>'+
         '<p class="inspector-description">'+esc(active.detail)+'</p><div class="inspector-actions"><button type="button" data-demo-action="Check connectivity">CHECK LINK</button><button type="button" data-demo-action="Manage firmware">FIRMWARE</button></div><p class="inspector-disclaimer">Preview only — no live hardware access.</p></aside></div>';
   };
+
+  function renderAndroid(){
+    const pool=devices.filter(d=>d.type==="android");
+    const ready=pool.filter(d=>d.status==="online");
+    const busy=simulatedJobCount?Math.min(ready.length,4):0;
+    const jobOptions=[["images","Image thumbnails"],["files","SHA-256 checksums"],["batch","Parallel data task"]];
+    return panelHeading("Android compute workers","Repurpose compatible Android phones to execute independent, supported ARM tasks. All data and job actions in this demo are simulated.",
+       '<span class="view-badge"><span></span> '+pool.length+' SAMPLE PHONES</span>')+
+      '<div class="android-demo-overview">'+[
+       [String(pool.length),"ENROLLED PHONES"],[String(ready.length),"AVAILABLE WORKERS"],[String(busy),"ASSIGNED TO LAST JOB"],[String(simulatedJobCount),"JOBS SIMULATED"]
+      ].map(x=>'<div><b>'+esc(x[0])+'</b><span>'+esc(x[1])+'</span></div>').join("")+'</div>'+
+      '<div class="android-job-toolbar"><label for="android-job-kind">SAMPLE WORKLOAD</label><select id="android-job-kind">'+jobOptions.map(x=>'<option value="'+x[0]+'">'+esc(x[1])+'</option>').join("")+'</select><button type="button" data-demo-job="dispatch">DISPATCH SAMPLE JOB ↗</button><span class="small-copy">PREVIEW ONLY · NO REAL PHONES CONNECTED</span></div>'+
+      '<div class="android-job-results" role="status" aria-live="polite">'+(latestJob?'<strong>LAST RESULT:</strong> '+esc(latestJob):'Select a sample workload and dispatch it to see a simulated scheduling result. Compatible chunks would be processed on participating Android phones, then returned to the controller.')+'</div>'+
+      '<div class="device-ui" aria-label="Android worker pool"><div class="device-ui-title"><span>REGISTERED WORKERS</span><em>SIMULATED ARM WORKER POOL</em></div>'+
+      pool.map(d=>'<div class="device-ui-row"><strong>'+esc(d.name)+'<small>'+esc(d.metrics)+'</small></strong><span>'+esc(d.firmware)+'<small>'+esc(d.battery)+'</small></span><span class="'+(d.status==="online"?"online":"idle")+'">'+esc(d.status.toUpperCase())+'<br><button type="button" class="android-inspect" data-worker-open="'+esc(d.id)+'">Inspect ↗</button></span></div>').join("")+
+      '</div><p class="inspector-disclaimer">Demo environment only. This feature is a development target, not a downloadable or connected Android worker app.</p>';
+  }
+
   const root=$("#console-view");
   const embedded=$("#hardware-demo-content");
   function renderEmbedded(){if(embedded)embedded.innerHTML=renderHardware();}
   function setView(key,{scroll=false}={}){
-    if(!root||(!dataViews[key]&&key!=="overview"&&key!=="hardware"))return;
+    if(!root||(!dataViews[key]&&key!=="overview"&&key!=="hardware"&&key!=="android"))return;
     currentView=key;
     $$(".console-nav-item").forEach(button=>{
       const on=button.dataset.view===key;button.classList.toggle("is-active",on);button.setAttribute("aria-pressed",String(on));
     });
     const crumb=$("#console-path");if(crumb)crumb.textContent=(nameOf[key]||key).toUpperCase();
-    root.innerHTML=key==="overview"?renderOverview():key==="hardware"?renderHardware():renderGeneric(key);
+    root.innerHTML=key==="overview"?renderOverview():key==="hardware"?renderHardware():key==="android"?renderAndroid():renderGeneric(key);
     if(scroll){const el=$(".console")||$("#experience");if(el)el.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});}
   }
   function renderFleet(){if(currentView==="hardware")setView("hardware");renderEmbedded();}
@@ -100,6 +127,10 @@
   }
   document.addEventListener("click",event=>{
     const open=event.target.closest("[data-open-view]");
+    const worker=event.target.closest("[data-worker-open]");
+    if(worker){selectedFilter="android";selectedDevice=worker.dataset.workerOpen;setView("hardware");return;}
+    const dispatch=event.target.closest("[data-demo-job]");
+    if(dispatch){const kind=$("#android-job-kind")?.value||"images";const available=devices.filter(d=>d.type==="android"&&d.status==="online");const used=available.slice(0,4);simulatedJobCount+=1;latestJob=(kind==="images"?"Image thumbnails":kind==="files"?"SHA-256 checksums":"Parallel data task")+" job #"+simulatedJobCount+": split into "+used.length+" eligible work chunks, returned and verified in this simulation. Assigned: "+used.map(d=>d.name).join(", ")+". No real job was run.";setView("android");const sel=$("#android-job-kind");if(sel)sel.value=kind;return;}
     if(open){if(!root){window.location.href="/demo/?view="+encodeURIComponent(open.dataset.openView);}else{setView(open.dataset.openView,{scroll:true});}return;}
     const tab=event.target.closest(".console-nav-item[data-view]");
     if(tab){setView(tab.dataset.view);return;}
@@ -111,6 +142,6 @@
     if(action){toast(action.dataset.demoAction+' is part of the product concept. No real action was performed.');}
   });
   const requested = new URLSearchParams(location.search).get("view");
-  setView(requested && (dataViews[requested] || requested === "hardware" || requested === "overview") ? requested : "overview");
+  setView(requested && (dataViews[requested] || requested === "hardware" || requested === "overview" || requested === "android") ? requested : "overview");
   renderEmbedded();
 })();
