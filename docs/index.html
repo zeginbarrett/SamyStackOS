@@ -22,7 +22,7 @@
 <header class="header" id="top"><div class="container header-content">
   <a class="logo" href="#top" aria-label="SamyStackOS home"><svg class="logo-icon" viewBox="0 0 44 44" aria-hidden="true"><path d="M22 2 40 12v20L22 42 4 32V12L22 2Z" fill="#b9f66a"/><path d="m22 10 11 6.3v12.4L22 35l-11-6.3V16.3L22 10Z" fill="#11191c"/><path d="M22 16v12M16 22h12" stroke="#b9f66a" stroke-width="3.2" stroke-linecap="round"/></svg><span>SAMY<span>STACK</span><b>OS</b></span></a>
   <button class="nav-toggle" type="button" aria-controls="nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
-  <nav id="nav" class="nav" aria-label="Main navigation"><a href="#experience">The platform</a><a href="#features">Features</a><a href="#usecases">Use cases</a><a href="#roadmap">Roadmap</a><a href="#faq">FAQ</a></nav>
+  <nav id="nav" class="nav" aria-label="Main navigation"><a href="#experience">The platform</a><a href="#features">Features</a><a href="#hardware">Hardware</a><a href="#screenshots">Screenshots</a><a href="#usecases">Use cases</a><a href="#roadmap">Roadmap</a><a href="#faq">FAQ</a></nav>
   <a href="#experience" class="nav-cta">Explore the OS <span aria-hidden="true">↗</span></a>
 </div></header>
 <main id="main">
@@ -74,6 +74,7 @@
             <button type="button" class="console-nav-item" data-view="network" aria-pressed="false"><span class="nav-symbol">⌁</span><span>Networking</span></button>
             <button type="button" class="console-nav-item" data-view="backup" aria-pressed="false"><span class="nav-symbol">⟳</span><span>Backups</span></button>
             <button type="button" class="console-nav-item" data-view="apps" aria-pressed="false"><span class="nav-symbol">▦</span><span>App catalog</span></button>
+<button type="button" class="console-nav-item" data-view="hardware" aria-pressed="false"><span class="nav-symbol">⌘</span><span>Hardware fleet <b class="fleet-count">15</b></span></button>
           </nav>
           <div class="console-sidebar-bottom"><span class="console-sidebar-led"></span> DESIGN PREVIEW <small>v0.1 CONCEPT</small></div>
         </aside>
@@ -95,7 +96,7 @@
           <div class="console-foot"><span><span class="foot-dot"></span> DEMO ENVIRONMENT — NO REAL SERVERS CONNECTED</span><span>LOCAL-FIRST / SELF-HOSTED VISION</span></div>
         </div>
       </div>
-      <div class="demo-caption"><span>↳</span> Click the sidebar tabs to preview VMs, containers, networking, storage, backup and apps. Controls simulate actions only.</div>
+      <div class="demo-caption"><span>↳</span> Click any sidebar tab to explore VMs, containers, storage, networking, apps and 15 example hardware devices. Controls simulate actions only.</div>
     </div>
   </section>
 
@@ -122,7 +123,30 @@
 
   <section class="freedom section-pad"><div class="container freedom-grid"><div class="freedom-copy"><span class="kicker"><i></i> NO MORE SERVER SPRAWL</span><h2>A rack full of potential.<br><span>One place to run it.</span></h2><p>Start with one inexpensive machine. Add another. Then another. SamyStackOS is being designed for the kind of hardware people actually have—not just expensive enterprise racks.</p><div class="freedom-checks"><div><span>✓</span> Reuse compatible x86 mini PCs and small servers</div><div><span>✓</span> Grow toward multi-node management</div><div><span>✓</span> Manage workloads from the browser</div><div><span>✓</span> Keep a local-first control plane</div></div><a href="#roadmap" class="inline-link">SEE THE DEVELOPMENT ROADMAP <span>↗</span></a></div><div class="freedom-visual" aria-hidden="true"><div class="freedom-glow"></div><div class="machine machine-1"><span class="machine-label">MINI-01 <b>COMPUTE</b></span><div class="machine-face"><span>▥</span><i></i><i></i><i></i></div></div><div class="machine machine-2"><span class="machine-label">MINI-02 <b>COMPUTE</b></span><div class="machine-face"><span>▥</span><i></i><i></i><i></i></div></div><div class="machine machine-3"><span class="machine-label">NAS-01 <b>STORAGE</b></span><div class="machine-face"><span>▥</span><i></i><i></i><i></i></div></div><div class="machine-label-bottom">YOUR HARDWARE / YOUR INFRASTRUCTURE / YOUR CLOUD</div></div></div></section>
 
-  <section class="usecases section-pad" id="usecases"><div class="container"><div class="section-intro centered"><span class="kicker"><i></i> THE POSSIBILITIES</span><h2>What will you <span class="lime">run?</span></h2><p>Make that hardware earn its place. These are the kinds of home-server projects the platform is being designed to support.</p></div>
+  
+<section class="hardware-section section-pad" id="hardware">
+  <div class="container">
+    <div class="hardware-heading"><div class="section-intro left"><span class="kicker"><i></i> YOUR ENTIRE HARDWARE ECOSYSTEM</span><h2>Not just servers.<br><span class="lime">Everything connected.</span></h2><p>Your cluster is only half the story. Bring Raspberry Pis, ESP32 boards, touchscreen controllers, radios, cameras, voice endpoints, sensors and maker projects into the same management vision as your VMs and containers.</p></div><div class="hardware-counter"><strong>15</strong><span>EXAMPLE DEVICES<br>IN THE INTERACTIVE DEMO</span></div></div>
+    <div class="hardware-categories">
+      <article class="hardware-category"><span class="hc-icon lime-ink">▤</span><span class="hc-meta">01 / COMPUTE</span><h3>Mini PCs & servers</h3><p>Virtual machines, containers, storage, services and the control plane for your whole lab.</p><span class="hc-tags">KVM · Debian · Clustering</span></article>
+      <article class="hardware-category"><span class="hc-icon violet-ink">◈</span><span class="hc-meta">02 / EDGE LINUX</span><h3>Raspberry Pi</h3><p>Run gateways, media systems, local dashboards, radio bridges, cameras and lightweight services.</p><span class="hc-tags">Pi 4 / Pi 5 · Edge · Gateways</span></article>
+      <article class="hardware-category"><span class="hc-icon cyan-ink">⌘</span><span class="hc-meta">03 / MICROCONTROLLERS</span><h3>ESP32 family</h3><p>Connect audio boards, sensors, buttons, touchscreens, LED controllers and automation endpoints.</p><span class="hc-tags">ESP32-S3 · MQTT · OTA goals</span></article>
+      <article class="hardware-category"><span class="hc-icon pink-ink">⌁</span><span class="hc-meta">04 / SPECIALTY</span><h3>Radio, cameras & displays</h3><p>Organize LoRa radios, portable controllers, IP cameras, USB devices and custom interfaces.</p><span class="hc-tags">LoRa · Cameras · Touch</span></article>
+    </div>
+    <div class="hardware-spotlight"><div><span class="spotlight-kicker">EXPLORE THE DEVICE FLEET</span><h3>See all 15 devices, not just a list of promises.</h3><p>The interactive Hardware tab includes example devices, connectivity, roles, firmware details and a device inspector. Filter by hardware type and select any device to see what SamyStackOS could manage.</p><button type="button" class="btn btn-primary" data-open-view="hardware">OPEN HARDWARE DEMO <span>↗</span></button></div><div class="hardware-spotlight-art" aria-hidden="true"><div class="spotlight-node">MINI PC<span class="light-green">●</span></div><div class="spotlight-node">RASPBERRY PI<span class="light-purple">●</span></div><div class="spotlight-node">ESP32-S3<span class="light-cyan">●</span></div><div class="spotlight-node">LORA RADIO<span class="light-pink">●</span></div><div class="spotlight-link">15 ENDPOINTS / ONE VIEW</div></div></div>
+  </div>
+</section>
+<section class="screenshots-section section-pad" id="screenshots"><div class="container">
+  <div class="section-intro left"><span class="kicker"><i></i> TAKE A CLOSER LOOK</span><h2>Explore the <span class="lime">interface.</span></h2><p>Three detailed design previews of how SamyStackOS could bring infrastructure and edge devices together. These are interface mockups with sample data, not screenshots of a released OS.</p></div>
+  <div class="screenshot-grid">
+    <a class="screenshot-item" href="./shots/cluster-overview.svg" target="_blank" rel="noopener noreferrer"><img src="./shots/cluster-overview.svg" loading="lazy" alt="SamyStackOS concept screenshot showing cluster overview, compute metrics and four server nodes"><div class="screenshot-info"><div><span>01 / DASHBOARD</span><strong>Your cluster at a glance</strong></div><span class="screenshot-expand">↗</span></div></a>
+    <a class="screenshot-item" href="./shots/hardware-fleet.svg" target="_blank" rel="noopener noreferrer"><img src="./shots/hardware-fleet.svg" loading="lazy" alt="SamyStackOS concept screenshot of fifteen server, Raspberry Pi, ESP32, LoRa and camera devices managed in a unified hardware fleet"><div class="screenshot-info"><div><span>02 / HARDWARE</span><strong>15-device fleet manager</strong></div><span class="screenshot-expand">↗</span></div></a>
+    <a class="screenshot-item" href="./shots/device-inspector.svg" target="_blank" rel="noopener noreferrer"><img src="./shots/device-inspector.svg" loading="lazy" alt="SamyStackOS concept screenshot of ESP32 speaker inspector with Wi-Fi, status, firmware, sensors and planned controls"><div class="screenshot-info"><div><span>03 / DEVICE DETAIL</span><strong>ESP32 device inspector</strong></div><span class="screenshot-expand">↗</span></div></a>
+  </div>
+  <div class="screenshot-disclaimer">CONCEPT INTERFACES · EXAMPLE HARDWARE · NO LIVE DEVICE CONNECTION</div>
+</div></section>
+
+<section class="usecases section-pad" id="usecases"><div class="container"><div class="section-intro centered"><span class="kicker"><i></i> THE POSSIBILITIES</span><h2>What will you <span class="lime">run?</span></h2><p>Make that hardware earn its place. These are the kinds of home-server projects the platform is being designed to support.</p></div>
     <div class="usecase-grid">
       <article class="usecase-card"><div class="usecase-art media-art" aria-hidden="true"><div class="art-play">▶</div><div class="art-wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div><div class="usecase-copy"><span>01 / MEDIA</span><h3>Build your own streaming universe.</h3><p>Host a personal media server, organize libraries and keep your entertainment on your terms.</p></div></article>
       <article class="usecase-card"><div class="usecase-art home-art" aria-hidden="true"><div class="home-ring"><span>⌂</span></div><div class="home-device d1"></div><div class="home-device d2"></div><div class="home-device d3"></div></div><div class="usecase-copy"><span>02 / SMART HOME</span><h3>Make your home run itself.</h3><p>Bring automation, dashboards and connected-device services onto hardware you control.</p></div></article>
