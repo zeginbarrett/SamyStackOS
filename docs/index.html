@@ -13,8 +13,8 @@
   <meta property="og:image" content="https://samystack.com/social-card.svg">
   <title>SamyStackOS | Make Every Machine Count</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css">
-  <script src="./app.js" defer></script>
+  <link rel="stylesheet" href="./styles.css?v=fleet-20261114-4">
+  <script src="./app.js?v=fleet-20261114-4" defer></script>
 </head>
 <body>
 <a href="#main" class="skip">Skip to content</a>
@@ -133,8 +133,8 @@
       <article class="hardware-category"><span class="hc-icon cyan-ink">⌘</span><span class="hc-meta">03 / MICROCONTROLLERS</span><h3>ESP32 family</h3><p>Connect audio boards, sensors, buttons, touchscreens, LED controllers and automation endpoints.</p><span class="hc-tags">ESP32-S3 · MQTT · OTA goals</span></article>
       <article class="hardware-category"><span class="hc-icon pink-ink">⌁</span><span class="hc-meta">04 / SPECIALTY</span><h3>Radio, cameras & displays</h3><p>Organize LoRa radios, portable controllers, IP cameras, USB devices and custom interfaces.</p><span class="hc-tags">LoRa · Cameras · Touch</span></article>
     </div>
-    <div class="hardware-spotlight"><div><span class="spotlight-kicker">EXPLORE THE DEVICE FLEET</span><h3>See your devices in one place.</h3><p>The interactive Hardware tab includes example devices, connectivity, roles, firmware details and a device inspector. Filter by hardware type and select any device to see what SamyStackOS could manage.</p><button type="button" class="btn btn-primary" id="open-hardware-demo" aria-controls="hardware-demo" aria-expanded="false">OPEN HARDWARE DEMO <span>↓</span></button></div><div class="hardware-spotlight-art" aria-hidden="true"><div class="spotlight-node">MINI PC<span class="light-green">●</span></div><div class="spotlight-node">RASPBERRY PI<span class="light-purple">●</span></div><div class="spotlight-node">ESP32-S3<span class="light-cyan">●</span></div><div class="spotlight-node">LORA RADIO<span class="light-pink">●</span></div><div class="spotlight-link">ONE ECOSYSTEM / ONE VIEW</div></div></div>
-    <div class="hardware-live-demo" id="hardware-demo" hidden>
+    <details class="hardware-demo-details" id="hardware-demo"><summary class="hardware-spotlight"><div><span class="spotlight-kicker">EXPLORE THE DEVICE FLEET</span><h3>See your devices in one place.</h3><p>The interactive Hardware tab includes example devices, connectivity, roles, firmware details and a device inspector. Filter by hardware type and select any device to see what SamyStackOS could manage.</p><span class="btn btn-primary demo-trigger" id="open-hardware-demo">OPEN HARDWARE DEMO <span>↓</span></span></div><div class="hardware-spotlight-art" aria-hidden="true"><div class="spotlight-node">MINI PC<span class="light-green">●</span></div><div class="spotlight-node">RASPBERRY PI<span class="light-purple">●</span></div><div class="spotlight-node">ESP32-S3<span class="light-cyan">●</span></div><div class="spotlight-node">LORA RADIO<span class="light-pink">●</span></div><div class="spotlight-link">ONE ECOSYSTEM / ONE VIEW</div></div></summary>
+    <div class="hardware-live-demo">
       <div class="hardware-live-heading">
         <div><span class="kicker"><i></i> INTERACTIVE HARDWARE FLEET</span><h3>Explore the hardware in action.</h3><p>Filter the fleet and choose any device to inspect its role, network link, status, firmware and sample telemetry.</p></div>
         <span class="hardware-demo-pill"><span class="live-dot"></span> INTERACTIVE SIMULATION</span>
@@ -142,16 +142,12 @@
       <div class="hardware-live-workspace">
         <div class="hardware-live-top"><strong><span class="small-hw-logo">⌘</span> SAMYSTACKOS / HARDWARE FLEET</strong><span>HARDWARE FLEET · LOCAL-FIRST VISION</span></div>
         <div id="hardware-demo-content" aria-label="Interactive hardware fleet">
-          <div class="hardware-fallback">
-            <p>Hardware inventory demo includes 4 server nodes, 3 Raspberry Pis, 5 ESP32 endpoints, 2 radios, and a camera.</p>
-            <div class="hardware-static-preview">
-              <span>mini-01 · Control node</span><span>pi4-radio · Raspberry Pi 4</span><span>waveshare-audio · ESP32-S3</span><span>lilygo-embed · T-Embed CC1101</span><span>esp32-cam · Camera endpoint</span>
-            </div>
-          </div>
+          <div class="hardware-fallback"><p><strong>Hardware fleet concept</strong> · Select a device below to see its purpose and connection details. Interactive filters and the inspector load when JavaScript is available.</p><div class="fallback-device-grid"><details class="fallback-device"><summary><span>mini-01</span><em>Online</em></summary><p>x86 mini PC · Cluster manager · Ethernet</p></details><details class="fallback-device"><summary><span>mini-02</span><em>Online</em></summary><p>x86 mini PC · Compute node · Ethernet</p></details><details class="fallback-device"><summary><span>mini-03</span><em>Online</em></summary><p>x86 mini PC · Compute node · Ethernet</p></details><details class="fallback-device"><summary><span>nas-01</span><em>Online</em></summary><p>Home server · Storage · Ethernet</p></details><details class="fallback-device"><summary><span>pi4-radio</span><em>Online</em></summary><p>Raspberry Pi 4 · Media bridge · Ethernet</p></details><details class="fallback-device"><summary><span>pi5-vision</span><em>Online</em></summary><p>Raspberry Pi 5 · Camera gateway · Ethernet</p></details><details class="fallback-device"><summary><span>pi-zero-screen</span><em>Idle</em></summary><p>Pi Zero · Status display · USB</p></details><details class="fallback-device"><summary><span>waveshare-audio</span><em>Online</em></summary><p>ESP32-S3 Audio · Voice endpoint · Wi-Fi</p></details><details class="fallback-device"><summary><span>esp32-a1s</span><em>Online</em></summary><p>ESP32-A1S · Music player · Wi-Fi</p></details><details class="fallback-device"><summary><span>lilygo-embed</span><em>Online</em></summary><p>LILYGO T-Embed · Radio remote · Wi-Fi</p></details><details class="fallback-device"><summary><span>heltec-lora</span><em>Online</em></summary><p>Heltec LoRa V4 · Mesh radio · LoRa</p></details><details class="fallback-device"><summary><span>cyd-remote</span><em>Online</em></summary><p>ESP32 CYD · Touch display · Wi-Fi</p></details><details class="fallback-device"><summary><span>esp32-cam</span><em>Online</em></summary><p>ESP32-CAM · Camera · Wi-Fi</p></details><details class="fallback-device"><summary><span>esp32-climate</span><em>Online</em></summary><p>ESP32-C3 · Climate sensor · MQTT</p></details><details class="fallback-device"><summary><span>esp32-relay</span><em>Offline</em></summary><p>ESP32-S3 Relay · Automation · MQTT</p></details></div></div>
         </div>
       </div>
       <p class="hardware-live-disclaimer">This demonstration uses example devices and simulated data. No real hardware is connected or controlled.</p>
     </div>
+    </details>
   </div>
 </section>
 <section class="screenshots-section section-pad" id="screenshots"><div class="container">
