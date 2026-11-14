@@ -2,186 +2,152 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b0b0d">
-  <meta name="description" content="SamyStackOS is an independent, in-development homelab operating system focused on unified management of mini PCs, virtual machines, containers and clusters.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b0d12">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="SamyStackOS: one operating system for your entire homelab. A new approach to virtual machines, containers, clusters, storage and self-hosting. In development.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="SamyStackOS | Your hardware. One platform.">
-  <meta property="og:description" content="A new approach to the homelab. Unified control, fewer moving parts, hardware you already own. In development.">
+  <meta property="og:title" content="SamyStackOS — Make Every Machine Count">
+  <meta property="og:description" content="One powerful home for your VMs, containers, storage and servers. Meet the next-generation homelab OS, in development.">
   <meta property="og:url" content="https://samystack.com/">
   <meta property="og:image" content="https://samystack.com/social-card.svg">
-  <title>SamyStackOS — Your Hardware. One Platform.</title>
-  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <title>SamyStackOS | Make Every Machine Count</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
   <script src="./app.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="topline">
-    <div class="wrap topline-inner">
-      <span><span class="small-square"></span> SAMYSTACK / INDEPENDENT HOMELAB PLATFORM</span>
-      <span class="topline-right">SELF-HOSTED BY DESIGN <span class="topline-slash">//</span> BUILT FOR THE HOMELAB</span>
+<a href="#main" class="skip">Skip to content</a>
+<div class="announcement"><div class="container announcement-inner"><span><span class="live-dot"></span> INTRODUCING SAMYSTACKOS <span class="announcement-sep">/</span> A NEW WAY TO RUN YOUR HOMELAB</span><a href="#roadmap">See what's coming <span aria-hidden="true">↗</span></a></div></div>
+<header class="header" id="top"><div class="container header-content">
+  <a class="logo" href="#top" aria-label="SamyStackOS home"><svg class="logo-icon" viewBox="0 0 44 44" aria-hidden="true"><path d="M22 2 40 12v20L22 42 4 32V12L22 2Z" fill="#b9f66a"/><path d="m22 10 11 6.3v12.4L22 35l-11-6.3V16.3L22 10Z" fill="#11191c"/><path d="M22 16v12M16 22h12" stroke="#b9f66a" stroke-width="3.2" stroke-linecap="round"/></svg><span>SAMY<span>STACK</span><b>OS</b></span></a>
+  <button class="nav-toggle" type="button" aria-controls="nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <nav id="nav" class="nav" aria-label="Main navigation"><a href="#experience">The platform</a><a href="#features">Features</a><a href="#usecases">Use cases</a><a href="#roadmap">Roadmap</a><a href="#faq">FAQ</a></nav>
+  <a href="#experience" class="nav-cta">Explore the OS <span aria-hidden="true">↗</span></a>
+</div></header>
+<main id="main">
+  <section class="hero">
+    <div class="hero-texture" aria-hidden="true"></div>
+    <div class="container hero-layout">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> YOUR OWN HARDWARE. YOUR OWN RULES.</div>
+        <h1>MAKE EVERY<br><em>MACHINE</em><br>COUNT<span class="fullstop">.</span></h1>
+        <p class="hero-lead">Your mini PCs, your storage, your apps, your entire homelab—<strong>finally working together.</strong> Meet the operating system being designed to turn scattered hardware into one powerful platform.</p>
+        <div class="hero-ctas"><a href="#experience" class="btn btn-primary">Explore SamyStackOS <span>↗</span></a><a href="#features" class="btn btn-muted">Discover the features <span>↓</span></a></div>
+        <div class="hero-status"><span class="status-bullet"></span><b>EARLY DEVELOPMENT</b><span class="sep-line"></span><span>PRODUCT VISION & INTERACTIVE PREVIEW</span></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of mini PCs connected into one homelab cluster">
+        <div class="orbit orbit-outer"></div><div class="orbit orbit-inner"></div><div class="orbit-beam orbit-beam-a"></div><div class="orbit-beam orbit-beam-b"></div><div class="orbit-beam orbit-beam-c"></div>
+        <div class="orbit-chip chip-a"><span class="chip-dot"></span> KVM / VMs</div>
+        <div class="orbit-chip chip-b"><span class="chip-dot violet"></span> CONTAINERS</div>
+        <div class="orbit-chip chip-c"><span class="chip-dot cyan"></span> STORAGE</div>
+        <div class="server-block server-a"><span class="server-stripe"></span><span class="server-dots"><i></i><i></i><i></i></span><span class="server-slots"></span></div>
+        <div class="server-block server-b"><span class="server-stripe"></span><span class="server-dots"><i></i><i></i><i></i></span><span class="server-slots"></span></div>
+        <div class="server-block server-c"><span class="server-stripe"></span><span class="server-dots"><i></i><i></i><i></i></span><span class="server-slots"></span></div>
+        <div class="core-orbit"><div class="core-icon"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M22 2 40 12v20L22 42 4 32V12L22 2Z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M22 13v18M13 22h18" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></div><strong>ONE SYSTEM</strong><span>ALL YOUR NODES</span></div>
+        <div class="art-caption">ARCHITECTURE / CONCEPT VISUALIZATION</div>
+      </div>
     </div>
-  </div>
-  <header class="site-header">
-    <div class="wrap nav-shell">
-      <a href="#top" class="brand" aria-label="SamyStackOS homepage">
-        <svg class="brand-symbol" viewBox="0 0 48 48" role="img" aria-label="SamyStackOS logo">
-          <path d="M5 12 24 3l19 9-19 9L5 12Z" fill="#ff852b"/>
-          <path d="m5 23 19 9 19-9" stroke="#ff852b" fill="none" stroke-width="5" stroke-linecap="square"/>
-          <path d="m5 34 19 9 19-9" stroke="#ff852b" fill="none" stroke-width="5" stroke-linecap="square"/>
-        </svg>
-        <span>SAMY<span>STACK</span><strong>OS</strong></span>
-      </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="site-nav" id="site-nav" aria-label="Site navigation">
-        <a href="#platform">Platform</a>
-        <a href="#features">Features</a>
-        <a href="#roadmap">Roadmap</a>
-        <a href="#questions">FAQ</a>
-      </nav>
-      <a class="header-link" href="#roadmap">DEVELOPMENT ROADMAP <span aria-hidden="true">↗</span></a>
-    </div>
-  </header>
+  </section>
 
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="wrap hero-layout">
-        <div class="hero-left">
-          <div class="section-label"><span class="label-bar"></span> THE HOMELAB OPERATING SYSTEM <span class="label-index">/ 001</span></div>
-          <h1>YOUR HARDWARE.<br>ONE <span class="orange-word">PLATFORM.</span><br>NO COMPROMISES<span class="period">.</span></h1>
-          <p class="hero-description">Stop managing every server like an island. SamyStackOS is being built to connect your mini PCs, virtual machines, containers and services under one roof.</p>
-          <div class="hero-buttons">
-            <a class="btn btn-orange" href="#platform">EXPLORE THE PLATFORM <span aria-hidden="true">↗</span></a>
-            <a class="btn btn-outline" href="#features">VIEW FEATURES <span aria-hidden="true">↗</span></a>
-          </div>
-          <div class="build-note"><span class="build-dot"></span><span>IN ACTIVE DEVELOPMENT</span><i></i><span>PREVIEW — NOT A PUBLIC RELEASE</span></div>
-        </div>
+  <section class="promise-strip"><div class="container promise-grid">
+    <div><span class="promise-num">01</span><strong>Run more. Manage less.</strong><span>VMs, containers & apps</span></div>
+    <div><span class="promise-num">02</span><strong>Use the hardware you own.</strong><span>Mini PCs & home servers</span></div>
+    <div><span class="promise-num">03</span><strong>Connect the whole homelab.</strong><span>One unified management layer</span></div>
+    <div><span class="promise-num">04</span><strong>Stay in control.</strong><span>Local-first design philosophy</span></div>
+  </div></section>
 
-        <div class="hero-right" id="platform">
-          <div class="app-corner-title"><span class="app-tag">/ SYSTEM OVERVIEW</span><span class="app-concept">INTERFACE CONCEPT <span class="orange-dot"></span></span></div>
-          <div class="app-window" aria-label="Interactive, fictional SamyStackOS interface preview. No live server connection.">
-            <div class="app-header">
-              <div class="app-breadcrumb"><span class="app-mark">▰</span> <b>SAMYSTACK</b><span class="slash">/</span> CLUSTER</div>
-              <div class="app-header-controls"><span class="app-host"><span class="status-ring"></span> DEMO / OFFLINE</span><span class="app-avatar">S</span></div>
+  <section id="experience" class="experience section-pad">
+    <div class="container">
+      <div class="section-intro centered"><span class="kicker"><i></i> MEET YOUR NEW COMMAND CENTER</span><h2>One screen. <span class="lime">Everything you run.</span></h2><p>What if every piece of your infrastructure finally lived in one place? Explore how the SamyStackOS interface is being designed to work.</p></div>
+      <div class="demo-head"><span><span class="demo-live"></span> SAMYSTACK CONSOLE <span class="demo-label">INTERACTIVE PRODUCT DEMO</span></span><div class="demo-head-right"><span>SIMULATED DATA</span><span class="demo-frame-dot"></span><span class="demo-frame-dot"></span><span class="demo-frame-dot"></span></div></div>
+      <div class="console" aria-label="SamyStackOS interactive dashboard demonstration using fictional data">
+        <aside class="console-sidebar">
+          <div class="console-logo"><span class="tiny-stack">▥</span><span>samystack<span class="lime">/</span>os</span></div>
+          <div class="console-nav-label">WORKSPACE</div>
+          <nav class="console-nav" aria-label="Product preview screens">
+            <button type="button" class="console-nav-item is-active" data-view="overview" aria-pressed="true"><span class="nav-symbol">◫</span><span>Overview</span></button>
+            <button type="button" class="console-nav-item" data-view="nodes" aria-pressed="false"><span class="nav-symbol">▤</span><span>Cluster & nodes</span></button>
+            <button type="button" class="console-nav-item" data-view="vms" aria-pressed="false"><span class="nav-symbol">▣</span><span>Virtual machines</span></button>
+            <button type="button" class="console-nav-item" data-view="containers" aria-pressed="false"><span class="nav-symbol">⬡</span><span>Containers</span></button>
+            <button type="button" class="console-nav-item" data-view="storage" aria-pressed="false"><span class="nav-symbol">▥</span><span>Storage</span></button>
+            <button type="button" class="console-nav-item" data-view="network" aria-pressed="false"><span class="nav-symbol">⌁</span><span>Networking</span></button>
+            <button type="button" class="console-nav-item" data-view="backup" aria-pressed="false"><span class="nav-symbol">⟳</span><span>Backups</span></button>
+            <button type="button" class="console-nav-item" data-view="apps" aria-pressed="false"><span class="nav-symbol">▦</span><span>App catalog</span></button>
+          </nav>
+          <div class="console-sidebar-bottom"><span class="console-sidebar-led"></span> DESIGN PREVIEW <small>v0.1 CONCEPT</small></div>
+        </aside>
+        <div class="console-main">
+          <div class="console-topbar"><div><span class="console-location">HOME <span>/</span> <b id="console-path">OVERVIEW</b></span></div><div class="console-clock"><span class="clock-led"></span><time id="console-clock">--:--</time><span class="console-user">DEMO</span></div></div>
+          <div class="console-view" id="console-view" aria-live="polite">
+            <div class="view-heading"><div><div class="view-subtitle">HOMELAB AT A GLANCE</div><h3>Good to see you again.</h3><p>Everything your cluster needs, all in one place.</p></div><span class="view-badge"><span></span> SAMPLE CLUSTER</span></div>
+            <div class="stat-grid">
+              <div class="stat"><span>ONLINE NODES</span><strong>04 <small>/ 04</small></strong><span class="stat-foot"><i></i> All connected</span></div>
+              <div class="stat"><span>RUNNING VMs</span><strong>12</strong><span class="stat-foot"><i></i> Across 3 hosts</span></div>
+              <div class="stat"><span>CONTAINERS</span><strong>26</strong><span class="stat-foot"><i></i> 24 healthy</span></div>
+              <div class="stat"><span>STORAGE USED</span><strong>62<small>%</small></strong><span class="stat-foot">7.4 TB of 12 TB</span></div>
             </div>
-            <div class="app-body">
-              <aside class="app-sidebar" aria-label="Preview navigation">
-                <div class="app-section-title">WORKSPACE</div>
-                <button type="button" data-view="overview" class="app-nav-button selected" aria-pressed="true"><span class="side-icon">▦</span><span>Overview</span></button>
-                <button type="button" data-view="nodes" class="app-nav-button" aria-pressed="false"><span class="side-icon">▤</span><span>Nodes</span></button>
-                <button type="button" data-view="workloads" class="app-nav-button" aria-pressed="false"><span class="side-icon">▣</span><span>Workloads</span></button>
-                <div class="app-sidebar-rule"></div>
-                <span class="app-side-static"><span class="side-icon">◇</span><span>Storage</span><small>SOON</small></span>
-                <span class="app-side-static"><span class="side-icon">⌁</span><span>Network</span><small>SOON</small></span>
-                <div class="app-bottom-logo"><span class="orange-square"></span> CONCEPT BUILD</div>
-              </aside>
-              <div class="app-content">
-                <div class="app-main-title">
-                  <div><span class="app-upper">YOUR INFRASTRUCTURE / MOCK DATA</span><h2 id="preview-title">Cluster overview</h2></div>
-                  <div class="app-day"><span id="app-clock">--:--</span><small>LOCAL TIME</small></div>
-                </div>
-                <div class="app-metric-row">
-                  <div class="app-metric"><span>CONNECTED NODES</span><b id="metric-one">04 <small>/ 04</small></b><div class="mini-steps"><i></i><i></i><i></i><i></i></div></div>
-                  <div class="app-metric"><span>ACTIVE WORKLOADS</span><b id="metric-two">18 <small>RUNNING</small></b><div class="app-track"><i></i></div></div>
-                  <div class="app-metric"><span>CLUSTER CPU</span><b id="metric-three">27 <small>%</small></b><div class="cpu-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-                </div>
-                <div class="app-list">
-                  <div class="app-list-header"><b id="list-title">COMPUTE NODES</b><span id="list-subtitle">04 MACHINES <span class="accent-arrow">↗</span></span></div>
-                  <div id="preview-rows" class="app-rows" aria-live="polite">
-                    <div class="app-row"><span class="app-row-name"><span class="green-led"></span><b>compute-01</b><small>PRIMARY NODE</small></span><span>8 CORES</span><span class="app-row-usage"><span style="width:42%"></span></span><em>ONLINE</em></div>
-                    <div class="app-row"><span class="app-row-name"><span class="green-led"></span><b>compute-02</b><small>COMPUTE</small></span><span>6 CORES</span><span class="app-row-usage"><span style="width:66%"></span></span><em>ONLINE</em></div>
-                    <div class="app-row"><span class="app-row-name"><span class="green-led"></span><b>compute-03</b><small>COMPUTE</small></span><span>8 CORES</span><span class="app-row-usage"><span style="width:24%"></span></span><em>ONLINE</em></div>
-                    <div class="app-row"><span class="app-row-name"><span class="green-led"></span><b>storage-01</b><small>STORAGE</small></span><span>4 CORES</span><span class="app-row-usage"><span style="width:51%"></span></span><em>ONLINE</em></div>
-                  </div>
-                </div>
-                <div class="app-notice"><span class="notice-icon">i</span> Design preview only. Values are illustrative. No servers are connected.</div>
-              </div>
+            <div class="view-columns">
+              <div class="ui-panel"><div class="ui-panel-head"><strong>CLUSTER NODES</strong><span>STATUS / LOAD</span></div><div class="ui-row"><span class="device-name"><i></i> mini-01 <small>MANAGER</small></span><span class="mini-bar"><b style="width:36%"></b></span><span class="healthy">ONLINE</span></div><div class="ui-row"><span class="device-name"><i></i> mini-02 <small>COMPUTE</small></span><span class="mini-bar"><b style="width:58%"></b></span><span class="healthy">ONLINE</span></div><div class="ui-row"><span class="device-name"><i></i> mini-03 <small>COMPUTE</small></span><span class="mini-bar"><b style="width:26%"></b></span><span class="healthy">ONLINE</span></div><div class="ui-row"><span class="device-name"><i></i> nas-01 <small>STORAGE</small></span><span class="mini-bar"><b style="width:43%"></b></span><span class="healthy">ONLINE</span></div></div>
+              <div class="ui-panel panel-meter"><div class="ui-panel-head"><strong>RESOURCE POOL</strong><span>CLUSTER-WIDE</span></div><div class="resource-line"><span>PROCESSOR</span><b>38%</b></div><div class="resource-track"><span style="width:38%"></span></div><div class="resource-line"><span>MEMORY</span><b>54%</b></div><div class="resource-track"><span style="width:54%;background:var(--violet)"></span></div><div class="resource-line"><span>STORAGE</span><b>62%</b></div><div class="resource-track"><span style="width:62%;background:var(--cyan)"></span></div><div class="resource-meta">METRICS ARE ILLUSTRATIVE ONLY</div></div>
             </div>
           </div>
-          <div class="app-underbar"><span>01 / PRODUCT PREVIEW</span><span>BUILT FOR DESKTOP, DESIGNED FOR ANY SCREEN</span></div>
+          <div class="console-foot"><span><span class="foot-dot"></span> DEMO ENVIRONMENT — NO REAL SERVERS CONNECTED</span><span>LOCAL-FIRST / SELF-HOSTED VISION</span></div>
         </div>
       </div>
-      <div class="wrap"><div class="hero-foot-rule"></div></div>
-    </section>
+      <div class="demo-caption"><span>↳</span> Click the sidebar tabs to preview VMs, containers, networking, storage, backup and apps. Controls simulate actions only.</div>
+    </div>
+  </section>
 
-    <section class="pillars wrap" aria-label="Design principles">
-      <div class="pillar"><span class="pillar-no">01</span><div><strong>DEBIAN FOUNDATION</strong><p>Built around familiar, proven Linux tools.</p></div></div>
-      <div class="pillar"><span class="pillar-no">02</span><div><strong>LOCAL-FIRST CONTROL</strong><p>Your hardware. Your network. Your rules.</p></div></div>
-      <div class="pillar"><span class="pillar-no">03</span><div><strong>CLUSTER-READY VISION</strong><p>One place to see and manage every node.</p></div></div>
-    </section>
-
-    <section class="feature-section" id="features">
-      <div class="wrap">
-        <div class="section-heading">
-          <div class="overline"><span class="orange-square"></span> WHY SAMYSTACKOS / 02</div>
-          <div class="heading-flex"><h2>YOUR LAB.<br><span class="dim-text">UNDER CONTROL.</span></h2><p>Powerful infrastructure shouldn't mean five dashboards, a notebook of IP addresses and hours of configuration. These are the capabilities we're building toward.</p></div>
-        </div>
-        <div class="feature-grid">
-          <article class="feat feat-large">
-            <div class="feat-top"><span>01 / THE BIG PICTURE</span><span>PROPOSED</span></div>
-            <div class="feat-graphic feat-graphic-cluster" aria-hidden="true"><div class="graphic-card center"><span class="shape-stack">▰</span><strong>CONTROL</strong></div><div class="graphic-link line-one"></div><div class="graphic-link line-two"></div><div class="graphic-link line-three"></div><div class="graphic-card mini node-graphic-1">NODE / 01 <i></i></div><div class="graphic-card mini node-graphic-2">NODE / 02 <i></i></div><div class="graphic-card mini node-graphic-3">NODE / 03 <i></i></div></div>
-            <div class="feat-copy"><h3>One dashboard for the entire stack.</h3><p>View nodes, services, resource usage and system health from a single interface, instead of managing everything independently.</p></div>
-          </article>
-          <article class="feat">
-            <div class="feat-top"><span>02 / DISCOVERY</span><span>PLANNED</span></div>
-            <div class="feat-icon-block"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="7"/><circle cx="40" cy="40" r="23" fill="none" stroke-dasharray="5 6"/><circle cx="40" cy="40" r="37" fill="none" stroke-dasharray="3 6"/><path d="M40 3v15m0 44v15M3 40h15m44 0h15" fill="none"/></svg></div>
-            <div class="feat-copy"><h3>Plug in. Discover. Connect.</h3><p>Identify compatible machines on the network and bring them together with a guided setup experience.</p></div>
-          </article>
-          <article class="feat">
-            <div class="feat-top"><span>03 / WORKLOADS</span><span>PLANNED</span></div>
-            <div class="feat-icon-block"><svg viewBox="0 0 80 80" aria-hidden="true"><rect x="8" y="12" width="26" height="26" rx="2"/><rect x="45" y="12" width="26" height="26" rx="2"/><rect x="8" y="48" width="26" height="20" rx="2"/><rect x="45" y="48" width="26" height="20" rx="2"/><path d="M21 25h0M58 25h0M21 58h0M58 58h0" stroke-width="6" stroke-linecap="round"/></svg></div>
-            <div class="feat-copy"><h3>VMs, containers and apps.</h3><p>Deploy, monitor and organize workloads without having to juggle separate tools for every box.</p></div>
-          </article>
-          <article class="feat">
-            <div class="feat-top"><span>04 / RESILIENCE</span><span>FUTURE GOAL</span></div>
-            <div class="feat-icon-block"><svg viewBox="0 0 80 80" aria-hidden="true"><path d="m40 5 28 13v21c0 19-12 30-28 36-16-6-28-17-28-36V18L40 5Z" fill="none"/><path d="m27 41 9 9 18-20" fill="none" stroke-width="5"/></svg></div>
-            <div class="feat-copy"><h3>Keep services standing.</h3><p>Longer-term plans include backup, recovery, high availability and smart workload placement.</p></div>
-          </article>
+  <section class="features section-pad" id="features">
+    <div class="container">
+      <div class="section-intro left"><span class="kicker"><i></i> BUILT FOR HOW YOU ACTUALLY SELF-HOST</span><h2>Not just a server OS.<br><span class="lime">Your whole homelab.</span></h2><p>More than a dashboard: a connected toolkit for the things you already run and the things you'll want to build next. Each capability below is a design target, not an announcement of a finished release.</p></div>
+      <div class="feature-showcase">
+        <div class="feature-main"><div class="feature-main-top"><span class="feature-id">01 / VIRTUALIZATION</span><span class="target-label">CORE TARGET</span></div><div class="feature-main-art" aria-hidden="true"><div class="vm-window vm-back"><span>CONTAINER / RUNNING</span><span class="three-bits">● ● ●</span></div><div class="vm-window vm-front"><div class="vm-window-title"><span class="mini-led"></span><span>ubuntu-server-01</span><em>RUNNING</em></div><div class="vm-window-content"><span>CPU <b>4 vCPU</b></span><span>MEMORY <b>8 GB</b></span><span>DISK <b>120 GB</b></span></div><div class="vm-window-bottom"><span>▮▮▮▮▮▯▯▯▯</span><b>KVM</b></div></div><div class="vm-window vm-ghost"><span>VM / READY</span></div></div><h3>Virtual machines without the ceremony.</h3><p>Create, inspect, start, stop and organize Linux or Windows VMs, with CPU, RAM, disk and console management designed into one workflow.</p><button class="text-action" type="button" data-open-view="vms">Explore VM management <span>↗</span></button></div>
+        <div class="feature-side">
+          <article class="feature-mini"><div class="feature-mini-icon violet-ink">⬡</div><div><span class="feature-id">02 / CONTAINERS</span><h3>Your apps, always within reach.</h3><p>Plan for app deployment and lifecycle tools covering containers, services, images and logs.</p><button class="text-action" data-open-view="containers" type="button">See containers ↗</button></div></article>
+          <article class="feature-mini"><div class="feature-mini-icon cyan-ink">▥</div><div><span class="feature-id">03 / STORAGE</span><h3>Put all that disk space to work.</h3><p>Bring together disks, storage pools, snapshots and shares with a clear view of capacity.</p><button class="text-action" data-open-view="storage" type="button">See storage ↗</button></div></article>
+          <article class="feature-mini"><div class="feature-mini-icon lime-ink">⌁</div><div><span class="feature-id">04 / NETWORKING</span><h3>Stop memorizing IP addresses.</h3><p>Visualize bridges, interfaces, addresses, VLANs and service connectivity.</p><button class="text-action" data-open-view="network" type="button">See networking ↗</button></div></article>
         </div>
       </div>
-    </section>
+      <div class="capability-grid">
+        <article><span class="cap-icon">⊞</span><span class="cap-overline">05 / CLUSTER</span><h3>Many boxes. One brain.</h3><p>Discover compatible nodes and grow beyond one host. Centralize resource visibility and workload management.</p><button type="button" data-open-view="nodes">Explore cluster →</button></article>
+        <article><span class="cap-icon">◷</span><span class="cap-overline">06 / PROTECTION</span><h3>Back it up. Bring it back.</h3><p>Plan snapshots, scheduled backups, restore workflows and eventually high-availability options.</p><button type="button" data-open-view="backup">Explore backups →</button></article>
+        <article><span class="cap-icon">✳</span><span class="cap-overline">07 / APP CENTER</span><h3>From idea to running service.</h3><p>An approachable catalog for the personal-cloud, automation, media and dev tools you love.</p><button type="button" data-open-view="apps">Explore apps →</button></article>
+        <article><span class="cap-icon">◉</span><span class="cap-overline">08 / OBSERVABILITY</span><h3>Know what is happening.</h3><p>Real-time telemetry, alerts, health checks and an actual system clock—all in one view.</p><button type="button" data-open-view="overview">Explore monitoring →</button></article>
+      </div>
+      <div class="feature-bottom"><span>THE LONG-TERM TOOLKIT</span><div>Debian foundation <i>✦</i> KVM / QEMU <i>✦</i> Containers <i>✦</i> ZFS goals <i>✦</i> Cluster discovery <i>✦</i> Backups <i>✦</i> Network control <i>✦</i> Automation</div></div>
+    </div>
+  </section>
 
-    <section class="focus-section" id="roadmap">
-      <div class="wrap">
-        <div class="section-heading">
-          <div class="overline"><span class="orange-square"></span> THE BUILD / 03</div>
-          <div class="heading-flex"><h2>START SMALL.<br><span class="dim-text">SCALE BIG.</span></h2><p>SamyStackOS is a work in progress. The roadmap is a direction, not a release schedule or a claim that features are already finished.</p></div>
-        </div>
-        <div class="roadmap">
-          <div class="roadmap-row current"><div class="roadmap-number">01</div><div class="roadmap-phase"><span class="roadmap-status"><span></span> CURRENT FOCUS</span><h3>Foundation + system UI</h3><p>Debian base, setup workflow, machine detection and a reliable management interface.</p></div><div class="roadmap-end">IN PROGRESS <span>↗</span></div></div>
-          <div class="roadmap-row"><div class="roadmap-number">02</div><div class="roadmap-phase"><span class="roadmap-status">NEXT MILESTONE</span><h3>Virtualization + containers</h3><p>VM management, containers, storage primitives, networking and resource reporting.</p></div><div class="roadmap-end">PLANNED <span>↗</span></div></div>
-          <div class="roadmap-row"><div class="roadmap-number">03</div><div class="roadmap-phase"><span class="roadmap-status">LONGER TERM</span><h3>Multi-node clustering</h3><p>Join hardware together, coordinate workloads and manage the lab as one system.</p></div><div class="roadmap-end">PLANNED <span>↗</span></div></div>
-          <div class="roadmap-row"><div class="roadmap-number">04</div><div class="roadmap-phase"><span class="roadmap-status">FUTURE DIRECTION</span><h3>Recovery + automated deployment</h3><p>Resilience, simplified app delivery and the features that make self-hosting easier to maintain.</p></div><div class="roadmap-end">VISION <span>↗</span></div></div>
-        </div>
-      </div>
-    </section>
+  <section class="freedom section-pad"><div class="container freedom-grid"><div class="freedom-copy"><span class="kicker"><i></i> NO MORE SERVER SPRAWL</span><h2>A rack full of potential.<br><span>One place to run it.</span></h2><p>Start with one inexpensive machine. Add another. Then another. SamyStackOS is being designed for the kind of hardware people actually have—not just expensive enterprise racks.</p><div class="freedom-checks"><div><span>✓</span> Reuse compatible x86 mini PCs and small servers</div><div><span>✓</span> Grow toward multi-node management</div><div><span>✓</span> Manage workloads from the browser</div><div><span>✓</span> Keep a local-first control plane</div></div><a href="#roadmap" class="inline-link">SEE THE DEVELOPMENT ROADMAP <span>↗</span></a></div><div class="freedom-visual" aria-hidden="true"><div class="freedom-glow"></div><div class="machine machine-1"><span class="machine-label">MINI-01 <b>COMPUTE</b></span><div class="machine-face"><span>▥</span><i></i><i></i><i></i></div></div><div class="machine machine-2"><span class="machine-label">MINI-02 <b>COMPUTE</b></span><div class="machine-face"><span>▥</span><i></i><i></i><i></i></div></div><div class="machine machine-3"><span class="machine-label">NAS-01 <b>STORAGE</b></span><div class="machine-face"><span>▥</span><i></i><i></i><i></i></div></div><div class="machine-label-bottom">YOUR HARDWARE / YOUR INFRASTRUCTURE / YOUR CLOUD</div></div></div></section>
 
-    <section class="questions-section wrap" id="questions">
-      <div class="section-heading">
-        <div class="overline"><span class="orange-square"></span> FAQ / 04</div>
-        <h2>THE DETAILS<span class="period">.</span></h2>
-      </div>
-      <div class="faq">
-        <details><summary>IS SAMYSTACKOS AVAILABLE TO INSTALL?<span>+</span></summary><p>Not as a public, stable release yet. This website presents the direction of the project and an illustrative interface—not a working online management console. An installer and release information will be available when the project is ready.</p></details>
-        <details><summary>IS THIS AN ALTERNATIVE TO PROXMOX OR UNRAID?<span>+</span></summary><p>That's part of the long-term ambition: an approachable homelab platform that brings together virtualization, containers and cluster management. It is not currently a replacement for either production system.</p></details>
-        <details><summary>WHAT HARDWARE WILL IT SUPPORT?<span>+</span></summary><p>The current target is common x86-64 mini PCs and home-server hardware with Debian as the foundation. Tested hardware and installation requirements will be documented as the project matures.</p></details>
-        <details><summary>IS THIS SITE A LIVE OS DASHBOARD?<span>+</span></summary><p>No. The dashboard above is an interactive design demonstration using sample data. It does not connect to servers or perform real management actions.</p></details>
-      </div>
-    </section>
+  <section class="usecases section-pad" id="usecases"><div class="container"><div class="section-intro centered"><span class="kicker"><i></i> THE POSSIBILITIES</span><h2>What will you <span class="lime">run?</span></h2><p>Make that hardware earn its place. These are the kinds of home-server projects the platform is being designed to support.</p></div>
+    <div class="usecase-grid">
+      <article class="usecase-card"><div class="usecase-art media-art" aria-hidden="true"><div class="art-play">▶</div><div class="art-wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div><div class="usecase-copy"><span>01 / MEDIA</span><h3>Build your own streaming universe.</h3><p>Host a personal media server, organize libraries and keep your entertainment on your terms.</p></div></article>
+      <article class="usecase-card"><div class="usecase-art home-art" aria-hidden="true"><div class="home-ring"><span>⌂</span></div><div class="home-device d1"></div><div class="home-device d2"></div><div class="home-device d3"></div></div><div class="usecase-copy"><span>02 / SMART HOME</span><h3>Make your home run itself.</h3><p>Bring automation, dashboards and connected-device services onto hardware you control.</p></div></article>
+      <article class="usecase-card"><div class="usecase-art dev-art" aria-hidden="true"><div class="terminal-art"><div><i></i><i></i><i></i></div><span><b>$</b> deploy project</span><span><b>✓</b> services ready</span><span><b>▍</b> </span></div></div><div class="usecase-copy"><span>03 / BUILD & EXPERIMENT</span><h3>Give every idea a place to live.</h3><p>Spin up development environments, test VMs, game servers and self-hosted applications.</p></div></article>
+    </div>
+  </div></section>
 
-    <section class="outro">
-      <div class="wrap outro-inner">
-        <div class="outro-label">SAMYSTACK OS <span> / IN DEVELOPMENT</span></div>
-        <h2>PUT YOUR HARDWARE<br>TO <span>WORK.</span></h2>
-        <div class="outro-bottom"><p>One system. Every node. Endless possibilities. A new foundation for your home infrastructure.</p><a class="btn btn-dark" href="#features">EXPLORE THE PLATFORM <span>↗</span></a></div>
-        <div class="outro-background" aria-hidden="true">S</div>
-      </div>
-    </section>
-  </main>
-  <footer class="footer"><div class="wrap footer-inner"><div class="footer-brand">SAMYSTACK<span>OS</span></div><p>Independent homelab software project. In development. Not affiliated with Unraid or Proxmox.</p><div><a href="#top">BACK TO TOP ↑</a><span>© <span id="year">2026</span> SAMYSTACKOS</span></div></div></footer>
+  <section class="roadmap section-pad" id="roadmap"><div class="container"><div class="roadmap-layout"><div class="roadmap-left"><span class="kicker"><i></i> BUILDING THE FOUNDATION</span><h2>Big ambitions.<br><span class="lime">Clear priorities.</span></h2><p>We're building toward an operating system that makes running a homelab genuinely simpler. This is the current direction—not a promise that the features below are already available.</p><div class="roadmap-pill"><span class="live-dot"></span> PROJECT STATUS: EARLY DEVELOPMENT</div></div><div class="roadmap-steps">
+    <div class="roadmap-step"><span class="roadmap-counter current">01</span><div><span class="roadmap-phase">CURRENT WORK</span><h3>Core OS + dashboard</h3><p>Debian-based foundation, an approachable interface, system information and initial hardware integration.</p></div><span class="roadmap-tag active">IN PROGRESS</span></div>
+    <div class="roadmap-step"><span class="roadmap-counter">02</span><div><span class="roadmap-phase">PLANNED</span><h3>VMs, containers, storage & networking</h3><p>Build out the daily tools that make a machine useful: deploy, connect, inspect and control.</p></div><span class="roadmap-tag">PLANNED</span></div>
+    <div class="roadmap-step"><span class="roadmap-counter">03</span><div><span class="roadmap-phase">PLANNED</span><h3>Node discovery + cluster management</h3><p>Connect multiple machines, manage capacity and consolidate the management experience.</p></div><span class="roadmap-tag">PLANNED</span></div>
+    <div class="roadmap-step"><span class="roadmap-counter">04</span><div><span class="roadmap-phase">FUTURE VISION</span><h3>Automated deployment + resilience</h3><p>App marketplace ambitions, backup/restore and longer-term high-availability features.</p></div><span class="roadmap-tag">EXPLORING</span></div>
+  </div></div></div></section>
+
+  <section class="faq section-pad" id="faq"><div class="container"><div class="faq-grid"><div class="faq-heading"><span class="kicker"><i></i> A FEW GOOD QUESTIONS</span><h2>The details<span class="lime">.</span></h2><p>The vision is ambitious. Here's what you should know today.</p></div><div class="faq-items">
+    <details><summary>Can I install SamyStackOS right now?<span>+</span></summary><p>Not as a public, production-ready release. The project is in early development, and this website shows the planned experience. Installation details will be provided when a release is ready.</p></details>
+    <details><summary>Is it intended to replace Proxmox or Unraid?<span>+</span></summary><p>SamyStackOS is an independent project aiming to combine approachable local-server management with virtualization, containers, storage and eventually clustering. It is not currently a production-ready replacement for those systems.</p></details>
+    <details><summary>Will I need expensive hardware?<span>+</span></summary><p>The design target is everyday 64-bit x86 mini PCs and home servers. Exact minimum specifications and compatibility will be published as hardware support is validated.</p></details>
+    <details><summary>Is the dashboard above real?<span>+</span></summary><p>It's a functional website demo with illustrative values—not a live server console. Tabs and demo interactions work, but they do not manage machines or save changes.</p></details>
+    <details><summary>Will it work without a cloud subscription?<span>+</span></summary><p>Local-first management is a core goal. Account, remote access and security details have not been finalized yet.</p></details>
+  </div></div></div></section>
+
+  <section class="final-cta"><div class="container final-cta-inner"><span class="final-kicker">THE HOMELAB OS YOU'VE BEEN WAITING FOR</span><h2>MORE FROM WHAT<br>YOU <span>ALREADY OWN.</span></h2><div class="final-row"><p>Fewer disconnected boxes. More building, creating and running what matters to you. Welcome to the SamyStackOS vision.</p><a href="#experience" class="btn btn-dark">TAKE ANOTHER LOOK <span>↗</span></a></div><div class="final-pattern" aria-hidden="true">+</div></div></section>
+</main>
+<footer class="footer"><div class="container footer-content"><a class="footer-logo" href="#top">SAMY<span>STACK</span>OS</a><span>Independent home server OS project · In development · Not affiliated with other OS vendors.</span><a href="#top">BACK TO TOP ↑</a><small>© <span id="year">2026</span> SAMYSTACKOS</small></div></footer>
+<div class="demo-toast" id="demo-toast" role="status" aria-live="polite" hidden></div>
 </body>
 </html>
