@@ -79,6 +79,8 @@
         '<p class="inspector-description">'+esc(active.detail)+'</p><div class="inspector-actions"><button type="button" data-demo-action="Check connectivity">CHECK LINK</button><button type="button" data-demo-action="Manage firmware">FIRMWARE</button></div><p class="inspector-disclaimer">Preview only — no live hardware access.</p></aside></div>';
   };
   const root=$("#console-view");
+  const embedded=$("#hardware-demo-content");
+  function renderEmbedded(){if(embedded)embedded.innerHTML=renderHardware();}
   function setView(key,{scroll=false}={}){
     if(!root||(!dataViews[key]&&key!=="overview"&&key!=="hardware"))return;
     currentView=key;
@@ -87,9 +89,9 @@
     });
     const crumb=$("#console-path");if(crumb)crumb.textContent=(nameOf[key]||key).toUpperCase();
     root.innerHTML=key==="overview"?renderOverview():key==="hardware"?renderHardware():renderGeneric(key);
-    if(scroll){const el=$("#experience");if(el)el.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});}
+    if(scroll){const el=$(".console")||$("#experience");if(el)el.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});}
   }
-  function renderFleet(){if(currentView==="hardware")setView("hardware");}
+  function renderFleet(){if(currentView==="hardware")setView("hardware");renderEmbedded();}
   let toastTimeout;
   function toast(message){
     const box=$("#demo-toast");if(!box)return;
@@ -109,4 +111,5 @@
     if(action){toast(action.dataset.demoAction+' is part of the product concept. No real action was performed.');}
   });
   setView("overview");
+  renderEmbedded();
 })();
