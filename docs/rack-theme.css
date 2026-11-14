@@ -35,7 +35,7 @@ body.demo-multipage .android-job-results strong{color:#7dd3ad}
  --accent2:#dfc9a8;--green:#8ab893;--bg:#101411;--panel:#1b211c;
  --panel2:#242b25;--border:#414c42
 }
-body.rack-site{background:linear-gradient(rgba(12,16,13,.91),rgba(12,16,13,.96)),url("/images/rack-wall.webp") center top/cover fixed;color:var(--ink)}
+body.rack-site{background:#161c18;color:var(--ink)}
 body.rack-site ::selection{background:#d9c39f;color:#161b17}
 .topline{height:3px;background:linear-gradient(90deg,#5b6a60,#c8b292,#657b65)}
 .site-nav{background:rgba(16,21,17,.96);border-color:#3f4c41;box-shadow:0 8px 26px #0007}
@@ -91,7 +91,7 @@ body.rack-site ::selection{background:#d9c39f;color:#161b17}
 .android-screen .big-val{color:#dfc7a5}
 .android-screen .screen-line b,.battery-bars:before{background:#95b798}
 .android-screen p{color:#b6c3b2}
-.bottom-band{background:linear-gradient(90deg,rgba(13,18,14,.97),rgba(13,18,14,.71)),url("/images/rack-wall.webp") 75% center/cover no-repeat;border-color:#5d6e60}
+.bottom-band{background:linear-gradient(115deg,#202922,#121a15);border-color:#5d6e60}
 .android-banner{background:linear-gradient(130deg,#272f28,#31392e);border-color:#687b68}
 .android-banner img{max-height:205px;object-fit:cover;border:1px solid #657766;border-radius:6px}
 .footer{background:#0d120e;border-color:#475549}
@@ -128,3 +128,23 @@ body.demo-multipage .android-job-toolbar select{background:#2b3a2c;border-color:
 body.demo-multipage .android-job-toolbar button{background:#c4b08c;border-color:#ddc69e;color:#1a211a}
 body.demo-multipage .android-job-results{background:#2b362e;border-color:#607662;color:#d7dfd4}
 body.demo-multipage .android-job-results strong{color:#9ad1a0}
+
+/* Whole-home thin-client education: graphite/moss palette and distinct workspace photography. */
+.thin-showcase{background:#1a211c}
+.thin-use-section{background:#1b221d}
+.thin-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center;gap:clamp(24px,5vw,68px)}
+.thin-copy h2{font-size:clamp(29px,3.7vw,45px);line-height:1.16;margin:12px 0 20px}
+.thin-copy p{font-size:15px;line-height:1.8;color:#c9d2c8}
+.thin-copy strong{color:#f3f5eb}
+.thin-note{margin:18px 0 20px;padding:14px 18px;border-left:3px solid #9ab69a;background:#2a352c;color:#d8e1d4;border-radius:0 7px 7px 0;font-size:13px;line-height:1.7}
+.thin-note strong{color:#dcefd8}
+.thin-figure{margin:0;background:#252d26;border:1px solid #5a6b5b;border-radius:13px;box-shadow:0 18px 40px #0007;overflow:hidden}
+.thin-figure img{display:block;width:100%;height:clamp(290px,35vw,440px);object-fit:cover;object-position:center}
+.thin-figure figcaption{padding:14px 18px;font-size:12px;line-height:1.65;color:#c9d0c5;background:#252e27}
+.thin-figure figcaption a{color:#b7d6b4;text-decoration:underline;text-underline-offset:3px}
+.thin-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:33px}
+.thin-steps>div{background:#273128;border:1px solid #516451;border-radius:9px;padding:21px 22px;min-width:0}
+.thin-steps b{font-size:11px;letter-spacing:.09em;color:#bedbb7}
+.thin-steps p{margin:10px 0 0;font-size:13px;line-height:1.6;color:#c4cec1}
+@media(max-width:880px){.thin-layout{grid-template-columns:1fr}.thin-figure img{height:340px}}
+@media(max-width:700px){.thin-steps{grid-template-columns:1fr}.thin-steps>div{padding:16px 20px}.thin-figure img{height:270px}}
