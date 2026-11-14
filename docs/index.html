@@ -133,7 +133,25 @@
       <article class="hardware-category"><span class="hc-icon cyan-ink">⌘</span><span class="hc-meta">03 / MICROCONTROLLERS</span><h3>ESP32 family</h3><p>Connect audio boards, sensors, buttons, touchscreens, LED controllers and automation endpoints.</p><span class="hc-tags">ESP32-S3 · MQTT · OTA goals</span></article>
       <article class="hardware-category"><span class="hc-icon pink-ink">⌁</span><span class="hc-meta">04 / SPECIALTY</span><h3>Radio, cameras & displays</h3><p>Organize LoRa radios, portable controllers, IP cameras, USB devices and custom interfaces.</p><span class="hc-tags">LoRa · Cameras · Touch</span></article>
     </div>
-    <div class="hardware-spotlight"><div><span class="spotlight-kicker">EXPLORE THE DEVICE FLEET</span><h3>See all 15 devices, not just a list of promises.</h3><p>The interactive Hardware tab includes example devices, connectivity, roles, firmware details and a device inspector. Filter by hardware type and select any device to see what SamyStackOS could manage.</p><button type="button" class="btn btn-primary" data-open-view="hardware">OPEN HARDWARE DEMO <span>↗</span></button></div><div class="hardware-spotlight-art" aria-hidden="true"><div class="spotlight-node">MINI PC<span class="light-green">●</span></div><div class="spotlight-node">RASPBERRY PI<span class="light-purple">●</span></div><div class="spotlight-node">ESP32-S3<span class="light-cyan">●</span></div><div class="spotlight-node">LORA RADIO<span class="light-pink">●</span></div><div class="spotlight-link">15 ENDPOINTS / ONE VIEW</div></div></div>
+    <div class="hardware-spotlight"><div><span class="spotlight-kicker">EXPLORE THE DEVICE FLEET</span><h3>See all 15 devices, not just a list of promises.</h3><p>The interactive Hardware tab includes example devices, connectivity, roles, firmware details and a device inspector. Filter by hardware type and select any device to see what SamyStackOS could manage.</p><a href="#hardware-demo" class="btn btn-primary" id="open-hardware-demo">OPEN HARDWARE DEMO <span>↓</span></a></div><div class="hardware-spotlight-art" aria-hidden="true"><div class="spotlight-node">MINI PC<span class="light-green">●</span></div><div class="spotlight-node">RASPBERRY PI<span class="light-purple">●</span></div><div class="spotlight-node">ESP32-S3<span class="light-cyan">●</span></div><div class="spotlight-node">LORA RADIO<span class="light-pink">●</span></div><div class="spotlight-link">15 ENDPOINTS / ONE VIEW</div></div></div>
+    <div class="hardware-live-demo" id="hardware-demo">
+      <div class="hardware-live-heading">
+        <div><span class="kicker"><i></i> INTERACTIVE HARDWARE FLEET / 15 DEVICES</span><h3>Explore the hardware in action.</h3><p>Filter the fleet and choose any device to inspect its role, network link, status, firmware and sample telemetry.</p></div>
+        <span class="hardware-demo-pill"><span class="live-dot"></span> INTERACTIVE SIMULATION</span>
+      </div>
+      <div class="hardware-live-workspace">
+        <div class="hardware-live-top"><strong><span class="small-hw-logo">⌘</span> SAMYSTACKOS / HARDWARE FLEET</strong><span>15 SAMPLE DEVICES · LOCAL-FIRST VISION</span></div>
+        <div id="hardware-demo-content" aria-label="Interactive 15-device hardware fleet">
+          <div class="hardware-fallback">
+            <p>Hardware inventory demo includes 4 server nodes, 3 Raspberry Pis, 5 ESP32 endpoints, 2 radios, and a camera.</p>
+            <div class="hardware-static-preview">
+              <span>mini-01 · Control node</span><span>pi4-radio · Raspberry Pi 4</span><span>waveshare-audio · ESP32-S3</span><span>lilygo-embed · T-Embed CC1101</span><span>esp32-cam · Camera endpoint</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="hardware-live-disclaimer">This demonstration uses example devices and simulated data. No real hardware is connected or controlled.</p>
+    </div>
   </div>
 </section>
 <section class="screenshots-section section-pad" id="screenshots"><div class="container">
