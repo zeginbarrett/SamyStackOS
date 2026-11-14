@@ -119,3 +119,21 @@
 .hardware-static-preview span{padding:11px;border:1px solid #425367;border-radius:5px}
 @media(max-width:730px){.hardware-live-heading{align-items:flex-start;flex-direction:column}.hardware-demo-pill{font-size:9px}.hardware-live-top{font-size:8px}}
 @media(max-width:530px){.hardware-live-workspace{padding:0 8px 10px}.hardware-live-top{margin:0 -8px 10px;padding:11px 9px}.hardware-live-top>span{display:none}.hardware-static-preview{grid-template-columns:1fr}}
+
+/* Native expandable hardware section: opens even when app.js is missing or stale. */
+.hardware-demo-details{display:block;margin-top:17px}
+.hardware-demo-details>summary{display:grid;cursor:pointer;list-style:none}
+.hardware-demo-details>summary::-webkit-details-marker{display:none}
+.hardware-demo-details>summary:focus-visible{outline:2px solid var(--lime);outline-offset:4px}
+.hardware-demo-details[open] .demo-trigger{background:#d6ffa3}
+.hardware-demo-details[open] .hardware-live-demo{display:block}
+.hardware-demo-details .hardware-live-demo{margin-top:28px}
+.fallback-device-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:14px}
+.fallback-device{border:1px solid #405267;background:#1d2a3a;border-radius:7px;min-width:0}
+.fallback-device>summary{cursor:pointer;display:flex;gap:8px;justify-content:space-between;align-items:center;padding:12px;list-style:none}
+.fallback-device>summary::-webkit-details-marker{display:none}
+.fallback-device>summary span{font:700 11px var(--mono);color:#e7f3fa;overflow:hidden;text-overflow:ellipsis}
+.fallback-device>summary em{color:var(--lime);font:700 9px var(--mono);font-style:normal}
+.fallback-device p{border-top:1px solid #39495b;color:#b1c2d2;margin:0;padding:12px;font-size:11px;line-height:1.6}
+@media(max-width:730px){.fallback-device-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.fallback-device-grid{grid-template-columns:1fr}}
