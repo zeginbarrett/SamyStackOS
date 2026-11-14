@@ -100,7 +100,7 @@
   }
   document.addEventListener("click",event=>{
     const open=event.target.closest("[data-open-view]");
-    if(open){setView(open.dataset.openView,{scroll:true});return;}
+    if(open){if(!root){window.location.href="/demo/?view="+encodeURIComponent(open.dataset.openView);}else{setView(open.dataset.openView,{scroll:true});}return;}
     const tab=event.target.closest(".console-nav-item[data-view]");
     if(tab){setView(tab.dataset.view);return;}
     const filter=event.target.closest("[data-fleet-filter]");
