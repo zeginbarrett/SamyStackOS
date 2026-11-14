@@ -28,3 +28,103 @@ body.demo-multipage .android-job-toolbar button:disabled{opacity:.45;cursor:defa
 body.demo-multipage .android-job-results{padding:14px;border:1px solid #3b5569;border-radius:7px;background:#152637;color:#b8d6e9;font-size:12px;line-height:1.6}
 body.demo-multipage .android-job-results strong{color:#7dd3ad}
 @media(max-width:740px){body.demo-multipage .android-demo-overview{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* PHOTOGRAPHIC GRAPHITE SITE REDESIGN */
+:root{
+ --ink:#f3f2ec;--muted:#b3bab0;--subtle:#899087;--accent:#bba88a;
+ --accent2:#dfc9a8;--green:#8ab893;--bg:#101411;--panel:#1b211c;
+ --panel2:#242b25;--border:#414c42
+}
+body.rack-site{background:linear-gradient(rgba(12,16,13,.91),rgba(12,16,13,.96)),url("/images/rack-wall.webp") center top/cover fixed;color:var(--ink)}
+body.rack-site ::selection{background:#d9c39f;color:#161b17}
+.topline{height:3px;background:linear-gradient(90deg,#5b6a60,#c8b292,#657b65)}
+.site-nav{background:rgba(16,21,17,.96);border-color:#3f4c41;box-shadow:0 8px 26px #0007}
+.brand-symbol{background:#2c352d;border-color:#6f806e;color:#e2d1b1}
+.brand-name span,.footer-brand span{color:#d8c2a2}
+.desktop-links a{color:#c3c8bf}
+.desktop-links a:hover,.desktop-links a[aria-current]{background:#313a32;color:#f7f4ec}
+.nav-action,.btn-primary{background:#d2bd9a;color:#171c18;border:1px solid #decaa7;box-shadow:0 4px 14px #0004}
+.nav-action:hover,.btn-primary:hover{background:#e8d7ba;color:#161b16}
+.btn-secondary{background:#263027e6;color:#eeeae1;border-color:#637264}
+.btn-secondary:hover{background:#394439}
+.menu-toggle{background:#293329;border-color:#58695a;color:#eeebdf}
+.page-hero{position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(11,15,12,.98),rgba(11,15,12,.82) 46%,rgba(11,15,12,.35)),url("/images/rack-wall.webp") 68% center/cover no-repeat;border-color:#485349}
+.hero-shell{min-height:650px;gap:46px;padding:60px 0}
+.hero-shell>div:first-child{max-width:620px}
+.hero-desc{color:#d0d4cb;text-shadow:0 2px 12px #080c09}
+.blue,.mark{color:#dfc9a8}
+.eyebrow,.label-soft{color:#d8be9b}
+.hero-art{height:510px;background:#171d18;border:1px solid #637363;border-radius:11px;box-shadow:0 25px 80px #000b,0 0 0 5px #252f2680}
+.hero-art img{width:100%;height:100%;object-fit:cover;object-position:72% center}
+.hero-art .art-caption{background:linear-gradient(transparent,#101610ee);color:#dbddd4}
+.hero-proof{color:#b2bcb1}
+.proof-pip:before{background:#8fc095}
+.segment{background:rgba(16,20,17,.93);border-color:#465048}
+.segment.alt{background:rgba(28,33,29,.97)}
+.tile,.step,.data-item,.roadmap-row,.faq-stack details,.gallery-card{background:linear-gradient(150deg,#293028,#1a201b);border:1px solid #4b574c;box-shadow:0 12px 26px #0003,inset 0 1px #ffffff0a}
+.tile:hover,.gallery-card:hover{border-color:#c4ae8e;transform:translateY(-2px)}
+.tile,.gallery-card{transition:transform .2s ease,border-color .2s ease}
+.tile .tiny,.tile a,.roadmap-row .phase,.step:before,.faq-stack summary:after{color:#dbc6a4}
+.tile .tile-icon{background:#343e33;border-color:#657661;color:#e1cda9}
+.tile p,.section-lead p,.bullet-list li{color:#bcc5b9}
+.bullet-list li{border-color:#465548}
+.rack-preview{background:#1e251e;border-color:#617061;box-shadow:0 20px 40px #0008}
+.rack-preview img{height:410px;width:100%;object-fit:cover;object-position:67% center}
+.rack-preview::after{color:#dddcd2;background:#121912cc;padding:5px 8px;border-radius:3px}
+.page-intro{background:linear-gradient(90deg,rgba(11,15,12,.98),rgba(11,15,12,.81) 64%,rgba(11,15,12,.53)),url("/images/rack-wall.webp") center 47%/cover no-repeat;border-color:#49584b}
+.page-intro p{color:#d1d4cc}
+.arch>div,.device-ui,.android-screen{background:#232c24;border-color:#58695b}
+.arch-arrow{color:#d4bc95}
+.gallery-card img{background:#1d251e;object-fit:cover}
+.gallery-card .gallery-text{background:#1c231d}
+.note{border-color:#d0b996;background:#2e322a;color:#d9d9cf}
+.status-line{background:#293a2b;border-color:#657c61;color:#c5e3bf}
+.device-ui{background:#1b241c}
+.device-ui-title{background:#2c392d;border-color:#556c55}
+.device-ui-title em,.device-ui-row .online{color:#9bcda3}
+.device-ui-row{border-color:#455345;color:#c3ccc0}
+.device-ui-row strong{color:#faf9f2}
+.device-ui-row small{color:#a9b7a8}
+.device-ui-row .idle{color:#e6c08b}
+.android-screen{background:#202820}
+.android-screen .screen-bar,.android-screen .screen-line,.battery-bars{background:#3c4a3d}
+.android-screen .big-val{color:#dfc7a5}
+.android-screen .screen-line b,.battery-bars:before{background:#95b798}
+.android-screen p{color:#b6c3b2}
+.bottom-band{background:linear-gradient(90deg,rgba(13,18,14,.97),rgba(13,18,14,.71)),url("/images/rack-wall.webp") 75% center/cover no-repeat;border-color:#5d6e60}
+.android-banner{background:linear-gradient(130deg,#272f28,#31392e);border-color:#687b68}
+.android-banner img{max-height:205px;object-fit:cover;border:1px solid #657766;border-radius:6px}
+.footer{background:#0d120e;border-color:#475549}
+.footer small,.footer-links a{color:#abb7aa}
+.footer-links a:hover{color:#e3d1b2}
+@media(max-width:940px){.desktop-links{background:#19221b;border-color:#536353}}
+@media(max-width:740px){body.rack-site{background-attachment:scroll}.page-hero{background-position:76% center}.hero-shell{min-height:0;padding:48px 0}.hero-art{height:390px}.hero-art img{object-position:75% center}.page-intro{background-position:68% center}}
+@media(max-width:520px){.hero-art{height:310px}}
+/* Neutral colored console, preserving navigation and working demo controls. */
+body.demo-multipage{
+ --lime:#b6c69f;--violet:#bfa889;--cyan:#b5bba9;--green:#8fbe98;
+ --bg:#101611;--bg2:#151c16;--surface:#1c241d;--surface2:#252e26;
+ --line:#47564a;--line2:#617260;--white:#f2f1e9;--muted:#b3c0b2;--soft:#919d90;
+ background:#111711;color:#f2f1e9
+}
+body.demo-multipage .multi-demo-toolbar{background:#171f18;border-color:#536152}
+body.demo-multipage .multi-demo-toolbar a{color:#dec7a3}
+body.demo-multipage .console{background:#1b241d;border-color:#4b5b4d}
+body.demo-multipage .console-sidebar{background:#192219;border-color:#4e604e}
+body.demo-multipage .console-main{background:#1e281f}
+body.demo-multipage .tiny-stack{background:#b7c59e;color:#1b2419}
+body.demo-multipage .console-nav-item{color:#bbc9b9}
+body.demo-multipage .console-nav-item:hover{background:#2a382d;color:#fff}
+body.demo-multipage .console-nav-item.is-active{background:#354737;border-color:#7c967a;color:#f3f5ed}
+body.demo-multipage .console-nav-item.is-active .nav-symbol{color:#dfc7a0}
+body.demo-multipage .console-topbar{background:#222d23;border-color:#536452}
+body.demo-multipage .console-location b,body.demo-multipage .console-clock{color:#f0efe7}
+body.demo-multipage .ui-panel,body.demo-multipage .stat{background:#273228;border-color:#516352}
+body.demo-multipage .fleet-row.selected{background:#354638;border-color:#92b096}
+body.demo-multipage .fleet-filter button.active{background:#455947;border-color:#8eb18b;color:#fff}
+body.demo-multipage .android-demo-overview>div{background:#28372a;border-color:#59745c}
+body.demo-multipage .android-demo-overview b{color:#f4f2e9}
+body.demo-multipage .android-job-toolbar select{background:#2b3a2c;border-color:#637864;color:#f2f1e9}
+body.demo-multipage .android-job-toolbar button{background:#c4b08c;border-color:#ddc69e;color:#1a211a}
+body.demo-multipage .android-job-results{background:#2b362e;border-color:#607662;color:#d7dfd4}
+body.demo-multipage .android-job-results strong{color:#9ad1a0}
