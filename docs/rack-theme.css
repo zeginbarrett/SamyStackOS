@@ -148,3 +148,136 @@ body.demo-multipage .android-job-results strong{color:#9ad1a0}
 .thin-steps p{margin:10px 0 0;font-size:13px;line-height:1.6;color:#c4cec1}
 @media(max-width:880px){.thin-layout{grid-template-columns:1fr}.thin-figure img{height:340px}}
 @media(max-width:700px){.thin-steps{grid-template-columns:1fr}.thin-steps>div{padding:16px 20px}.thin-figure img{height:270px}}
+
+
+/* SamyStackOS public-facing black-and-orange system, 2026-11-14 */
+body.rack-site {
+  --ink:#f8f6f2;--muted:#c1b9ae;--subtle:#968c80;--accent:#ed861d;--accent2:#ffb35b;--green:#ed861d;
+  --bg:#101010;--panel:#191919;--panel2:#222222;--border:#4b3b2e;
+  background:#111111;color:#f7f3ed;
+}
+body.rack-site .topline{background:linear-gradient(90deg,#ef821b,#f4b04e,#c65c0e)}
+body.rack-site .site-nav{background:#101010f8;border-color:#433127}
+body.rack-site .brand-symbol{background:#392211;border-color:#a65c20;color:#ffad50}
+body.rack-site .brand-name span,body.rack-site .footer-brand span{color:#ffa542}
+body.rack-site .desktop-links a{color:#d6ccc0}
+body.rack-site .desktop-links a:hover,body.rack-site .desktop-links a[aria-current]{background:#39291c;color:#fff}
+body.rack-site .nav-action,body.rack-site .btn-primary{background:#f09326;border-color:#ffb35f;color:#1b1108;box-shadow:0 4px 18px #0008}
+body.rack-site .nav-action:hover,body.rack-site .btn-primary:hover{background:#ffb550;color:#15100b}
+body.rack-site .btn-secondary{background:#211d19;border-color:#725032;color:#fff2e5}
+body.rack-site .btn-secondary:hover{background:#392819}
+body.rack-site .menu-toggle{background:#29201a;border-color:#785033}
+body.rack-site .page-hero{background:linear-gradient(90deg,#10100fee,#10100fdf 48%,#10100f30),url('/images/rack-wall.webp') 68% center/cover no-repeat;border-color:#4d3a2a}
+body.rack-site .hero-art{background:#171311;border-color:#715036;box-shadow:0 25px 80px #000b}
+body.rack-site .blue,body.rack-site .mark,body.rack-site .eyebrow,body.rack-site .label-soft{color:#ffb45f}
+body.rack-site .hero-proof{color:#cabdb0}
+body.rack-site .proof-pip:before{background:#f59a32}
+body.rack-site .segment{background:#171717;border-color:#40342b}
+body.rack-site .segment.alt{background:#1e1c1a}
+body.rack-site .tile,body.rack-site .step,body.rack-site .data-item,body.rack-site .roadmap-row,body.rack-site .faq-stack details,body.rack-site .gallery-card{background:linear-gradient(145deg,#24211e,#171717);border-color:#504034}
+body.rack-site .tile:hover,body.rack-site .gallery-card:hover{border-color:#f2a34b}
+body.rack-site .tile .tiny,body.rack-site .tile a,body.rack-site .roadmap-row .phase,body.rack-site .step:before,body.rack-site .faq-stack summary:after{color:#ffad53}
+body.rack-site .tile .tile-icon{background:#332418;border-color:#87542b;color:#f3aa54}
+body.rack-site .tile p,body.rack-site .section-lead p,body.rack-site .bullet-list li{color:#c8c0b6}
+body.rack-site .bullet-list li{border-color:#4e4034}
+body.rack-site .bullet-list li:before{color:#f1a04b}
+body.rack-site .rack-preview{background:#151515;border-color:#594738}
+body.rack-site .rack-preview::after{content:none!important;display:none!important}
+body.rack-site .art-caption{display:none!important}
+body.rack-site .page-intro{background:radial-gradient(ellipse at 90% 0%,#392719 0%,transparent 59%),linear-gradient(130deg,#191715,#121212);border-color:#4e3a29}
+body.rack-site .page-intro p{color:#d2c7ba}
+body.rack-site .status-line{background:#342419;border-color:#84592e;color:#ffcf96}
+body.rack-site .status-line:before{background:#f49d3f}
+body.rack-site .thin-showcase,body.rack-site .thin-use-section{background:#1a1816}
+body.rack-site .thin-copy p{color:#d5c9bb}
+body.rack-site .thin-note{background:#292018;border-left-color:#ed9439;color:#e9d3b6}
+body.rack-site .thin-note strong{color:#ffca8a}
+body.rack-site .thin-figure{background:#25201b;border-color:#66503e}
+body.rack-site .thin-steps>div{background:#25211d;border-color:#5d4534}
+body.rack-site .thin-steps b{color:#ffb55e}
+body.rack-site .thin-steps p{color:#d0c4b6}
+body.rack-site .bottom-band{background:linear-gradient(115deg,#302318,#171514);border-color:#754922}
+body.rack-site .android-banner{background:linear-gradient(120deg,#29211c,#171717);border-color:#775031}
+body.rack-site .android-banner>img{display:none}
+body.rack-site .footer{background:#101010;border-color:#503928}
+body.rack-site .footer-links a:hover{color:#ffb155}
+body.rack-site .device-ui,body.rack-site .android-screen{background:#1e1e1e;border-color:#705038}
+body.rack-site .device-ui-title{background:#2d231c;border-color:#70482b}
+body.rack-site .device-ui-title em,body.rack-site .device-ui-row .online{color:#ffab50}
+body.rack-site .android-screen .big-val{color:#ffae51}
+body.rack-site .android-screen .screen-line b,body.rack-site .battery-bars:before{background:#e38a30}
+body.rack-site .gallery-card .gallery-text{background:#1d1a17}
+body.rack-site .note{background:#292019;border-color:#e79635;color:#e1cabb}
+body.rack-site .arch>div{background:#282019;border-color:#694d35}
+body.rack-site .arch-arrow{color:#f3a246}
+body.rack-site .menu-toggle{color:#eee}
+body.rack-site .phone-fleet{background:transparent}
+.phone-fleet{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:7px;align-items:center;padding:22px 0;max-width:100%;overflow:hidden}
+.worker-phone{min-width:0;aspect-ratio:9/19.5;border:3px solid #3c4146;border-radius:18px;background:linear-gradient(145deg,#27292d,#08090b);box-shadow:0 13px 20px #0009,inset 0 0 0 1px #60646a;padding:7px 5px;display:flex;flex-direction:column;overflow:hidden}
+.phone-speaker{width:27%;height:2px;border-radius:9px;background:#767b7c;margin:1px auto 5px}
+.phone-status{display:flex;justify-content:space-between;color:#afb5a8;font:600 7px ui-monospace,monospace;margin:0 2px 10px}
+.phone-terminal{overflow:hidden;white-space:nowrap;line-height:1.7;color:#cfcdba;font:600 clamp(5px,.65vw,9px)/1.75 ui-monospace,monospace}
+.terminal-head{color:#ee9b4b;border-bottom:1px solid #503621;padding-bottom:4px;margin-bottom:7px;overflow:hidden;text-overflow:ellipsis}
+.term-muted{color:#8e9392}.term-orange{color:#ffaa43}
+.term-progress{height:3px;border-radius:4px;background:#3e3d38;margin:6px 0}
+.term-progress b{display:block;height:100%;background:#f09a34}
+.phone-bottom{width:26%;height:3px;border-radius:9px;background:#8a8b85;margin:auto auto 2px}
+.phone-fleet-mini{grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;padding:2px}
+.phone-fleet-mini .worker-phone{border-radius:12px;padding:3px 2px;border-width:2px}
+.phone-fleet-mini .phone-status,.phone-fleet-mini .phone-terminal{font-size:4px}
+.phone-fleet-mini .phone-terminal{line-height:1.7}
+.phone-cluster-frame{padding:14px 18px 0;border:1px solid #6e472c;border-radius:12px;background:linear-gradient(160deg,#24211e,#121212);box-shadow:0 22px 55px #0006;margin:34px 0}
+.phone-cluster-frame .phone-fleet{gap:10px}
+.phone-cluster-frame .worker-phone{border-width:4px;border-radius:19px}
+.phone-split{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;align-items:center}
+.phone-cluster-large{margin-top:24px}
+.phone-cluster-large .worker-phone{max-height:290px}
+.phone-cluster-large .phone-terminal{font-size:clamp(5px,.7vw,9px)}
+.android-banner .phone-fleet-mini{min-width:230px;width:100%;align-self:center}
+body.rack-site .gallery-card.phone-gallery{padding:22px;background:#1b1714;overflow:hidden}
+body.rack-site .gallery-card.phone-gallery .gallery-text{margin:-22px;padding:16px 20px 21px}
+body.rack-site .gallery-card.phone-gallery .phone-fleet{margin-bottom:20px}
+body.rack-site .gallery-card.phone-gallery .worker-phone{max-height:225px}
+body.rack-site .page-intro.android-hero{background:radial-gradient(ellipse at 75% 38%,#522b12aa,transparent 65%),#161414}
+@media(max-width:1000px){.phone-fleet{grid-template-columns:repeat(5,minmax(0,1fr));gap:11px}.phone-fleet-mini{grid-template-columns:repeat(5,minmax(0,1fr))}.phone-split{grid-template-columns:1fr}}
+@media(max-width:650px){.phone-fleet{gap:6px}.worker-phone{border-width:2px;padding:3px 2px;border-radius:11px}.phone-status{font-size:5px;margin-bottom:4px}.phone-terminal{font-size:5px;line-height:1.5}.phone-cluster-frame{padding:7px;margin:18px 0}.phone-cluster-frame .phone-fleet{gap:5px}.phone-cluster-frame .worker-phone{border-width:2px;border-radius:12px}.phone-split{grid-template-columns:1fr}.android-banner .phone-fleet-mini{min-width:0}.phone-fleet-mini .phone-terminal{font-size:4px}}
+/* The separate interactive demo must match the real product's orange-on-black interface. */
+body.demo-multipage{
+ --lime:#ff961f;--violet:#db7823;--cyan:#f9b451;--green:#ffae50;
+ --bg:#0d0d0e;--bg2:#131313;--surface:#181818;--surface2:#22201e;
+ --line:#48392d;--line2:#6d4b2f;--white:#f8f7f3;--muted:#c2b6a7;--soft:#988b7e;
+ background:#0d0d0d;color:#f4f2ee
+}
+body.demo-multipage .multi-demo-toolbar{background:#0d0d0d;border-color:#513a27}
+body.demo-multipage .multi-demo-toolbar a{color:#ffad52}
+body.demo-multipage .console{background:#141414;border-color:#3e3125}
+body.demo-multipage .console-sidebar{background:#111111;border-color:#3a2b21}
+body.demo-multipage .console-main{background:#171717}
+body.demo-multipage .tiny-stack{background:#f49427;color:#17100a}
+body.demo-multipage .console-nav-item{color:#cac3b8}
+body.demo-multipage .console-nav-item:hover{background:#2e231c;color:#fff}
+body.demo-multipage .console-nav-item.is-active{background:#3e2816;border-color:#aa6324;color:#ffcf95}
+body.demo-multipage .console-nav-item.is-active .nav-symbol{color:#ffa23c}
+body.demo-multipage .console-topbar{background:#1a1816;border-color:#463628}
+body.demo-multipage .console-location b,body.demo-multipage .console-clock{color:#f9f4eb}
+body.demo-multipage .ui-panel,body.demo-multipage .stat{background:#211e1b;border-color:#53402e}
+body.demo-multipage .view-badge{background:#362717;border-color:#a36730;color:#ffbb72}
+body.demo-multipage .view-badge span,body.demo-multipage .clock-led,body.demo-multipage .foot-dot{background:#ff9c33}
+body.demo-multipage .fleet-row.selected{background:#3b2b1f;border-color:#d48b42}
+body.demo-multipage .fleet-filter button.active{background:#613a1e;border-color:#d18a3a;color:#fff}
+body.demo-multipage .fleet-table{background:#1b1918;border-color:#503b2a}
+body.demo-multipage .fleet-row{background:#1f1c1a;color:#d1c7ba;border-color:#493829}
+body.demo-multipage .fleet-row:hover{background:#31241b}
+body.demo-multipage .android-demo-overview>div{background:#25201b;border-color:#66482b}
+body.demo-multipage .android-demo-overview b{color:#fff4e9}
+body.demo-multipage .android-job-toolbar select{background:#25201c;border-color:#765333;color:#fff4e7}
+body.demo-multipage .android-job-toolbar button{background:#ef932b;border-color:#f9ae54;color:#1e1209}
+body.demo-multipage .android-job-results{background:#211b17;border-color:#67482c;color:#e2cdb7}
+body.demo-multipage .android-job-results strong{color:#ffa744}
+body.demo-multipage .demo-action{background:#ef932b;color:#1e1209}
+body.demo-multipage .demo-action.dark{background:#30251d;color:#f9e9dc;border-color:#725035}
+body.demo-multipage .stat-foot i,body.demo-multipage .device-name i{background:#f3a14d}
+body.demo-multipage .healthy,body.demo-multipage .panel-table-row em{color:#ffb25e}
+body.demo-multipage .device-ui{background:#1e1916;border-color:#704b2a}
+body.demo-multipage .device-ui-title{background:#322218;border-color:#704b2a}
+body.demo-multipage .console-foot{border-color:#453121}
